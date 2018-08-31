@@ -1,0 +1,2665 @@
+
+[tkim058]_lab[custom].elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         000000f4  00800100  00000fea  0000109e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000fea  00000000  00000000  000000b4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000024  008001f4  008001f4  00001192  2**0
+                  ALLOC
+  3 .eeprom       00000006  00810000  00810000  00001192  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .comment      00000030  00000000  00000000  00001198  2**0
+                  CONTENTS, READONLY
+  5 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000011c8  2**2
+                  CONTENTS, READONLY
+  6 .debug_aranges 00000140  00000000  00000000  00001208  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   00001836  00000000  00000000  00001348  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 0000098c  00000000  00000000  00002b7e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   0000129a  00000000  00000000  0000350a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_frame  00000198  00000000  00000000  000047a4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    00000839  00000000  00000000  0000493c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc    000002a1  00000000  00000000  00005175  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_ranges 000000b0  00000000  00000000  00005416  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	65 c0       	rjmp	.+202    	; 0xcc <__ctors_end>
+   2:	00 00       	nop
+   4:	80 c0       	rjmp	.+256    	; 0x106 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	7e c0       	rjmp	.+252    	; 0x106 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	7c c0       	rjmp	.+248    	; 0x106 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	7a c0       	rjmp	.+244    	; 0x106 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	78 c0       	rjmp	.+240    	; 0x106 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	76 c0       	rjmp	.+236    	; 0x106 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	74 c0       	rjmp	.+232    	; 0x106 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	72 c0       	rjmp	.+228    	; 0x106 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	70 c0       	rjmp	.+224    	; 0x106 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	6e c0       	rjmp	.+220    	; 0x106 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	6c c0       	rjmp	.+216    	; 0x106 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	6a c0       	rjmp	.+212    	; 0x106 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	f8 c0       	rjmp	.+496    	; 0x226 <__vector_13>
+  36:	00 00       	nop
+  38:	66 c0       	rjmp	.+204    	; 0x106 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	64 c0       	rjmp	.+200    	; 0x106 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	62 c0       	rjmp	.+196    	; 0x106 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	60 c0       	rjmp	.+192    	; 0x106 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	5e c0       	rjmp	.+188    	; 0x106 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	5c c0       	rjmp	.+184    	; 0x106 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	5a c0       	rjmp	.+180    	; 0x106 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	58 c0       	rjmp	.+176    	; 0x106 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	56 c0       	rjmp	.+172    	; 0x106 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	54 c0       	rjmp	.+168    	; 0x106 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	52 c0       	rjmp	.+164    	; 0x106 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	50 c0       	rjmp	.+160    	; 0x106 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	4e c0       	rjmp	.+156    	; 0x106 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	4c c0       	rjmp	.+152    	; 0x106 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	4a c0       	rjmp	.+148    	; 0x106 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	48 c0       	rjmp	.+144    	; 0x106 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	46 c0       	rjmp	.+140    	; 0x106 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	44 c0       	rjmp	.+136    	; 0x106 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	42 c0       	rjmp	.+132    	; 0x106 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	40 c0       	rjmp	.+128    	; 0x106 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	3e c0       	rjmp	.+124    	; 0x106 <__bad_interrupt>
+  8a:	00 00       	nop
+  8c:	6c 01       	movw	r12, r24
+  8e:	97 01       	movw	r18, r14
+  90:	b1 01       	movw	r22, r2
+  92:	cd 01       	movw	r24, r26
+  94:	d1 01       	movw	r26, r2
+  96:	e3 01       	movw	r28, r6
+  98:	ee 01       	movw	r28, r28
+  9a:	fa 01       	movw	r30, r20
+  9c:	fe 01       	movw	r30, r28
+  9e:	02 02       	muls	r16, r18
+  a0:	18 02       	muls	r17, r24
+  a2:	21 02       	muls	r18, r17
+  a4:	25 02       	muls	r18, r21
+  a6:	2f 02       	muls	r18, r31
+  a8:	33 02       	muls	r19, r19
+  aa:	3d 02       	muls	r19, r29
+  ac:	4f 02       	muls	r20, r31
+  ae:	60 02       	muls	r22, r16
+  b0:	63 02       	muls	r22, r19
+  b2:	70 02       	muls	r23, r16
+  b4:	02 03       	mulsu	r16, r18
+  b6:	7f 02       	muls	r23, r31
+  b8:	86 02       	muls	r24, r22
+  ba:	8d 02       	muls	r24, r29
+  bc:	ae 02       	muls	r26, r30
+  be:	cf 02       	muls	r28, r31
+  c0:	02 03       	mulsu	r16, r18
+  c2:	e1 02       	muls	r30, r17
+  c4:	02 03       	mulsu	r16, r18
+  c6:	ed 02       	muls	r30, r29
+  c8:	02 03       	mulsu	r16, r18
+  ca:	00 03       	mulsu	r16, r16
+
+000000cc <__ctors_end>:
+  cc:	11 24       	eor	r1, r1
+  ce:	1f be       	out	0x3f, r1	; 63
+  d0:	cf ef       	ldi	r28, 0xFF	; 255
+  d2:	d0 e4       	ldi	r29, 0x40	; 64
+  d4:	de bf       	out	0x3e, r29	; 62
+  d6:	cd bf       	out	0x3d, r28	; 61
+
+000000d8 <__do_copy_data>:
+  d8:	11 e0       	ldi	r17, 0x01	; 1
+  da:	a0 e0       	ldi	r26, 0x00	; 0
+  dc:	b1 e0       	ldi	r27, 0x01	; 1
+  de:	ea ee       	ldi	r30, 0xEA	; 234
+  e0:	ff e0       	ldi	r31, 0x0F	; 15
+  e2:	00 e0       	ldi	r16, 0x00	; 0
+  e4:	0b bf       	out	0x3b, r16	; 59
+  e6:	02 c0       	rjmp	.+4      	; 0xec <__do_copy_data+0x14>
+  e8:	07 90       	elpm	r0, Z+
+  ea:	0d 92       	st	X+, r0
+  ec:	a4 3f       	cpi	r26, 0xF4	; 244
+  ee:	b1 07       	cpc	r27, r17
+  f0:	d9 f7       	brne	.-10     	; 0xe8 <__do_copy_data+0x10>
+
+000000f2 <__do_clear_bss>:
+  f2:	22 e0       	ldi	r18, 0x02	; 2
+  f4:	a4 ef       	ldi	r26, 0xF4	; 244
+  f6:	b1 e0       	ldi	r27, 0x01	; 1
+  f8:	01 c0       	rjmp	.+2      	; 0xfc <.do_clear_bss_start>
+
+000000fa <.do_clear_bss_loop>:
+  fa:	1d 92       	st	X+, r1
+
+000000fc <.do_clear_bss_start>:
+  fc:	a8 31       	cpi	r26, 0x18	; 24
+  fe:	b2 07       	cpc	r27, r18
+ 100:	e1 f7       	brne	.-8      	; 0xfa <.do_clear_bss_loop>
+ 102:	06 d7       	rcall	.+3596   	; 0xf10 <main>
+ 104:	70 c7       	rjmp	.+3808   	; 0xfe6 <_exit>
+
+00000106 <__bad_interrupt>:
+ 106:	7c cf       	rjmp	.-264    	; 0x0 <__vectors>
+
+00000108 <delay_ms>:
+		PORTB |= 0x02;
+	}
+	// set RCLK = 1. Rising edge copies data from ¡°Shift¡± register to ¡°Storage¡± register
+	PORTB |= 0x04;
+	// clears all lines in preparation of a new transmission
+	PORTB = 0x00;
+ 108:	18 16       	cp	r1, r24
+ 10a:	19 06       	cpc	r1, r25
+ 10c:	5c f0       	brlt	.+22     	; 0x124 <delay_ms+0x1c>
+ 10e:	08 95       	ret
+ 110:	00 00       	nop
+ 112:	21 50       	subi	r18, 0x01	; 1
+ 114:	31 09       	sbc	r19, r1
+ 116:	e1 f7       	brne	.-8      	; 0x110 <delay_ms+0x8>
+ 118:	4f 5f       	subi	r20, 0xFF	; 255
+ 11a:	5f 4f       	sbci	r21, 0xFF	; 255
+ 11c:	84 17       	cp	r24, r20
+ 11e:	95 07       	cpc	r25, r21
+ 120:	19 f4       	brne	.+6      	; 0x128 <delay_ms+0x20>
+ 122:	08 95       	ret
+ 124:	40 e0       	ldi	r20, 0x00	; 0
+ 126:	50 e0       	ldi	r21, 0x00	; 0
+ 128:	27 e0       	ldi	r18, 0x07	; 7
+ 12a:	33 e0       	ldi	r19, 0x03	; 3
+ 12c:	f1 cf       	rjmp	.-30     	; 0x110 <delay_ms+0x8>
+
+0000012e <LCD_WriteCommand>:
+ 12e:	5e 98       	cbi	0x0b, 6	; 11
+ 130:	88 b9       	out	0x08, r24	; 8
+ 132:	5f 9a       	sbi	0x0b, 7	; 11
+ 134:	00 00       	nop
+ 136:	5f 98       	cbi	0x0b, 7	; 11
+ 138:	82 e0       	ldi	r24, 0x02	; 2
+ 13a:	90 e0       	ldi	r25, 0x00	; 0
+ 13c:	e5 cf       	rjmp	.-54     	; 0x108 <delay_ms>
+ 13e:	08 95       	ret
+
+00000140 <LCD_ClearScreen>:
+ 140:	81 e0       	ldi	r24, 0x01	; 1
+ 142:	f5 cf       	rjmp	.-22     	; 0x12e <LCD_WriteCommand>
+ 144:	08 95       	ret
+
+00000146 <LCD_Cursor>:
+ 146:	81 31       	cpi	r24, 0x11	; 17
+ 148:	18 f4       	brcc	.+6      	; 0x150 <LCD_Cursor+0xa>
+ 14a:	81 58       	subi	r24, 0x81	; 129
+ 14c:	f0 cf       	rjmp	.-32     	; 0x12e <LCD_WriteCommand>
+ 14e:	08 95       	ret
+ 150:	81 55       	subi	r24, 0x51	; 81
+ 152:	ed cf       	rjmp	.-38     	; 0x12e <LCD_WriteCommand>
+ 154:	08 95       	ret
+
+00000156 <LCD_init>:
+ 156:	84 e6       	ldi	r24, 0x64	; 100
+ 158:	90 e0       	ldi	r25, 0x00	; 0
+ 15a:	d6 df       	rcall	.-84     	; 0x108 <delay_ms>
+ 15c:	88 e3       	ldi	r24, 0x38	; 56
+ 15e:	e7 df       	rcall	.-50     	; 0x12e <LCD_WriteCommand>
+ 160:	86 e0       	ldi	r24, 0x06	; 6
+ 162:	e5 df       	rcall	.-54     	; 0x12e <LCD_WriteCommand>
+ 164:	8f e0       	ldi	r24, 0x0F	; 15
+ 166:	e3 df       	rcall	.-58     	; 0x12e <LCD_WriteCommand>
+ 168:	81 e0       	ldi	r24, 0x01	; 1
+ 16a:	e1 df       	rcall	.-62     	; 0x12e <LCD_WriteCommand>
+ 16c:	8a e0       	ldi	r24, 0x0A	; 10
+ 16e:	90 e0       	ldi	r25, 0x00	; 0
+ 170:	cb cf       	rjmp	.-106    	; 0x108 <delay_ms>
+ 172:	08 95       	ret
+
+00000174 <LCD_WriteData>:
+ 174:	5e 9a       	sbi	0x0b, 6	; 11
+ 176:	88 b9       	out	0x08, r24	; 8
+ 178:	5f 9a       	sbi	0x0b, 7	; 11
+ 17a:	00 00       	nop
+ 17c:	5f 98       	cbi	0x0b, 7	; 11
+ 17e:	81 e0       	ldi	r24, 0x01	; 1
+ 180:	90 e0       	ldi	r25, 0x00	; 0
+ 182:	c2 cf       	rjmp	.-124    	; 0x108 <delay_ms>
+ 184:	08 95       	ret
+
+00000186 <LCD_DisplayString>:
+ 186:	0f 93       	push	r16
+ 188:	1f 93       	push	r17
+ 18a:	cf 93       	push	r28
+ 18c:	df 93       	push	r29
+ 18e:	18 2f       	mov	r17, r24
+ 190:	eb 01       	movw	r28, r22
+ 192:	d6 df       	rcall	.-84     	; 0x140 <LCD_ClearScreen>
+ 194:	88 81       	ld	r24, Y
+ 196:	88 23       	and	r24, r24
+ 198:	51 f0       	breq	.+20     	; 0x1ae <LCD_DisplayString+0x28>
+ 19a:	01 e0       	ldi	r16, 0x01	; 1
+ 19c:	01 0f       	add	r16, r17
+ 19e:	81 2f       	mov	r24, r17
+ 1a0:	d2 df       	rcall	.-92     	; 0x146 <LCD_Cursor>
+ 1a2:	89 91       	ld	r24, Y+
+ 1a4:	e7 df       	rcall	.-50     	; 0x174 <LCD_WriteData>
+ 1a6:	10 2f       	mov	r17, r16
+ 1a8:	88 81       	ld	r24, Y
+ 1aa:	81 11       	cpse	r24, r1
+ 1ac:	f6 cf       	rjmp	.-20     	; 0x19a <LCD_DisplayString+0x14>
+ 1ae:	df 91       	pop	r29
+ 1b0:	cf 91       	pop	r28
+ 1b2:	1f 91       	pop	r17
+ 1b4:	0f 91       	pop	r16
+ 1b6:	08 95       	ret
+
+000001b8 <ThumbsUp>:
+ 1b8:	88 e4       	ldi	r24, 0x48	; 72
+ 1ba:	b9 df       	rcall	.-142    	; 0x12e <LCD_WriteCommand>
+ 1bc:	8c e0       	ldi	r24, 0x0C	; 12
+ 1be:	da df       	rcall	.-76     	; 0x174 <LCD_WriteData>
+ 1c0:	8c e0       	ldi	r24, 0x0C	; 12
+ 1c2:	d8 df       	rcall	.-80     	; 0x174 <LCD_WriteData>
+ 1c4:	8f e0       	ldi	r24, 0x0F	; 15
+ 1c6:	d6 df       	rcall	.-84     	; 0x174 <LCD_WriteData>
+ 1c8:	8f e0       	ldi	r24, 0x0F	; 15
+ 1ca:	d4 df       	rcall	.-88     	; 0x174 <LCD_WriteData>
+ 1cc:	8f e0       	ldi	r24, 0x0F	; 15
+ 1ce:	d2 df       	rcall	.-92     	; 0x174 <LCD_WriteData>
+ 1d0:	8e e0       	ldi	r24, 0x0E	; 14
+ 1d2:	d0 df       	rcall	.-96     	; 0x174 <LCD_WriteData>
+ 1d4:	80 e0       	ldi	r24, 0x00	; 0
+ 1d6:	ce df       	rcall	.-100    	; 0x174 <LCD_WriteData>
+ 1d8:	80 e0       	ldi	r24, 0x00	; 0
+ 1da:	cc cf       	rjmp	.-104    	; 0x174 <LCD_WriteData>
+ 1dc:	08 95       	ret
+
+000001de <TimerOn>:
+ 1de:	8b e0       	ldi	r24, 0x0B	; 11
+ 1e0:	80 93 81 00 	sts	0x0081, r24	; 0x800081 <__TEXT_REGION_LENGTH__+0x7e0081>
+ 1e4:	8d e7       	ldi	r24, 0x7D	; 125
+ 1e6:	90 e0       	ldi	r25, 0x00	; 0
+ 1e8:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7e0089>
+ 1ec:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7e0088>
+ 1f0:	82 e0       	ldi	r24, 0x02	; 2
+ 1f2:	80 93 6f 00 	sts	0x006F, r24	; 0x80006f <__TEXT_REGION_LENGTH__+0x7e006f>
+ 1f6:	10 92 85 00 	sts	0x0085, r1	; 0x800085 <__TEXT_REGION_LENGTH__+0x7e0085>
+ 1fa:	10 92 84 00 	sts	0x0084, r1	; 0x800084 <__TEXT_REGION_LENGTH__+0x7e0084>
+ 1fe:	80 91 25 01 	lds	r24, 0x0125	; 0x800125 <_avr_timer_M>
+ 202:	90 91 26 01 	lds	r25, 0x0126	; 0x800126 <_avr_timer_M+0x1>
+ 206:	a0 91 27 01 	lds	r26, 0x0127	; 0x800127 <_avr_timer_M+0x2>
+ 20a:	b0 91 28 01 	lds	r27, 0x0128	; 0x800128 <_avr_timer_M+0x3>
+ 20e:	80 93 0d 02 	sts	0x020D, r24	; 0x80020d <_avr_timer_cntcurr>
+ 212:	90 93 0e 02 	sts	0x020E, r25	; 0x80020e <_avr_timer_cntcurr+0x1>
+ 216:	a0 93 0f 02 	sts	0x020F, r26	; 0x80020f <_avr_timer_cntcurr+0x2>
+ 21a:	b0 93 10 02 	sts	0x0210, r27	; 0x800210 <_avr_timer_cntcurr+0x3>
+ 21e:	8f b7       	in	r24, 0x3f	; 63
+ 220:	80 68       	ori	r24, 0x80	; 128
+ 222:	8f bf       	out	0x3f, r24	; 63
+ 224:	08 95       	ret
+
+00000226 <__vector_13>:
+ 226:	1f 92       	push	r1
+ 228:	0f 92       	push	r0
+ 22a:	0f b6       	in	r0, 0x3f	; 63
+ 22c:	0f 92       	push	r0
+ 22e:	11 24       	eor	r1, r1
+ 230:	8f 93       	push	r24
+ 232:	9f 93       	push	r25
+ 234:	af 93       	push	r26
+ 236:	bf 93       	push	r27
+ 238:	80 91 0d 02 	lds	r24, 0x020D	; 0x80020d <_avr_timer_cntcurr>
+ 23c:	90 91 0e 02 	lds	r25, 0x020E	; 0x80020e <_avr_timer_cntcurr+0x1>
+ 240:	a0 91 0f 02 	lds	r26, 0x020F	; 0x80020f <_avr_timer_cntcurr+0x2>
+ 244:	b0 91 10 02 	lds	r27, 0x0210	; 0x800210 <_avr_timer_cntcurr+0x3>
+ 248:	01 97       	sbiw	r24, 0x01	; 1
+ 24a:	a1 09       	sbc	r26, r1
+ 24c:	b1 09       	sbc	r27, r1
+ 24e:	80 93 0d 02 	sts	0x020D, r24	; 0x80020d <_avr_timer_cntcurr>
+ 252:	90 93 0e 02 	sts	0x020E, r25	; 0x80020e <_avr_timer_cntcurr+0x1>
+ 256:	a0 93 0f 02 	sts	0x020F, r26	; 0x80020f <_avr_timer_cntcurr+0x2>
+ 25a:	b0 93 10 02 	sts	0x0210, r27	; 0x800210 <_avr_timer_cntcurr+0x3>
+ 25e:	89 2b       	or	r24, r25
+ 260:	8a 2b       	or	r24, r26
+ 262:	8b 2b       	or	r24, r27
+ 264:	99 f4       	brne	.+38     	; 0x28c <__vector_13+0x66>
+ 266:	81 e0       	ldi	r24, 0x01	; 1
+ 268:	80 93 0c 02 	sts	0x020C, r24	; 0x80020c <TimerFlag>
+ 26c:	80 91 25 01 	lds	r24, 0x0125	; 0x800125 <_avr_timer_M>
+ 270:	90 91 26 01 	lds	r25, 0x0126	; 0x800126 <_avr_timer_M+0x1>
+ 274:	a0 91 27 01 	lds	r26, 0x0127	; 0x800127 <_avr_timer_M+0x2>
+ 278:	b0 91 28 01 	lds	r27, 0x0128	; 0x800128 <_avr_timer_M+0x3>
+ 27c:	80 93 0d 02 	sts	0x020D, r24	; 0x80020d <_avr_timer_cntcurr>
+ 280:	90 93 0e 02 	sts	0x020E, r25	; 0x80020e <_avr_timer_cntcurr+0x1>
+ 284:	a0 93 0f 02 	sts	0x020F, r26	; 0x80020f <_avr_timer_cntcurr+0x2>
+ 288:	b0 93 10 02 	sts	0x0210, r27	; 0x800210 <_avr_timer_cntcurr+0x3>
+ 28c:	bf 91       	pop	r27
+ 28e:	af 91       	pop	r26
+ 290:	9f 91       	pop	r25
+ 292:	8f 91       	pop	r24
+ 294:	0f 90       	pop	r0
+ 296:	0f be       	out	0x3f, r0	; 63
+ 298:	0f 90       	pop	r0
+ 29a:	1f 90       	pop	r1
+ 29c:	18 95       	reti
+
+0000029e <TimerSet>:
+ 29e:	60 93 25 01 	sts	0x0125, r22	; 0x800125 <_avr_timer_M>
+ 2a2:	70 93 26 01 	sts	0x0126, r23	; 0x800126 <_avr_timer_M+0x1>
+ 2a6:	80 93 27 01 	sts	0x0127, r24	; 0x800127 <_avr_timer_M+0x2>
+ 2aa:	90 93 28 01 	sts	0x0128, r25	; 0x800128 <_avr_timer_M+0x3>
+ 2ae:	60 93 0d 02 	sts	0x020D, r22	; 0x80020d <_avr_timer_cntcurr>
+ 2b2:	70 93 0e 02 	sts	0x020E, r23	; 0x80020e <_avr_timer_cntcurr+0x1>
+ 2b6:	80 93 0f 02 	sts	0x020F, r24	; 0x80020f <_avr_timer_cntcurr+0x2>
+ 2ba:	90 93 10 02 	sts	0x0210, r25	; 0x800210 <_avr_timer_cntcurr+0x3>
+ 2be:	08 95       	ret
+
+000002c0 <MenuScreen>:
+enum Menus {home, wait, difficulty, play, wait_score, writeP1, WriteP2, winP1, winP2,
+holdwin, rwait, rwait1, rpage1, rwait3, rpage3, rwait4} Menu;
+unsigned short wincounter = 0;
+void MenuScreen()
+{
+	switch(Menu)
+ 2c0:	e0 91 17 02 	lds	r30, 0x0217	; 0x800217 <Menu>
+ 2c4:	8e 2f       	mov	r24, r30
+ 2c6:	90 e0       	ldi	r25, 0x00	; 0
+ 2c8:	80 31       	cpi	r24, 0x10	; 16
+ 2ca:	91 05       	cpc	r25, r1
+ 2cc:	08 f0       	brcs	.+2      	; 0x2d0 <MenuScreen+0x10>
+ 2ce:	dd c0       	rjmp	.+442    	; 0x48a <__LOCK_REGION_LENGTH__+0x8a>
+ 2d0:	fc 01       	movw	r30, r24
+ 2d2:	ea 5b       	subi	r30, 0xBA	; 186
+ 2d4:	ff 4f       	sbci	r31, 0xFF	; 255
+ 2d6:	58 c6       	rjmp	.+3248   	; 0xf88 <__tablejump2__>
+ 2d8:	80 91 12 02 	lds	r24, 0x0212	; 0x800212 <buttonD>
+ 2dc:	8f 71       	andi	r24, 0x1F	; 31
+	{
+		case home:
+		if((buttonD & 0x1F) == 0x00)
+ 2de:	69 f4       	brne	.+26     	; 0x2fa <MenuScreen+0x3a>
+		{
+			MULT = 0;
+ 2e0:	10 92 07 02 	sts	0x0207, r1	; 0x800207 <MULT>
+			SINGLE = 0;
+ 2e4:	10 92 08 02 	sts	0x0208, r1	; 0x800208 <SINGLE>
+			DIFF = 0;
+ 2e8:	10 92 06 02 	sts	0x0206, r1	; 0x800206 <DIFF>
+			P1 = 0;
+ 2ec:	10 92 05 02 	sts	0x0205, r1	; 0x800205 <P1>
+			P2 = 0;
+ 2f0:	10 92 04 02 	sts	0x0204, r1	; 0x800204 <P2>
+			Menu = home;
+ 2f4:	10 92 17 02 	sts	0x0217, r1	; 0x800217 <Menu>
+ 2f8:	d2 c0       	rjmp	.+420    	; 0x49e <__LOCK_REGION_LENGTH__+0x9e>
+		}
+		else if((buttonD & 0x1F) == 0x01)
+ 2fa:	81 30       	cpi	r24, 0x01	; 1
+ 2fc:	39 f4       	brne	.+14     	; 0x30c <MenuScreen+0x4c>
+		{
+			SINGLE = 1;
+ 2fe:	80 93 08 02 	sts	0x0208, r24	; 0x800208 <SINGLE>
+			MULT = 0;
+ 302:	10 92 07 02 	sts	0x0207, r1	; 0x800207 <MULT>
+			Menu = wait;
+ 306:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+ 30a:	da c0       	rjmp	.+436    	; 0x4c0 <__LOCK_REGION_LENGTH__+0xc0>
+		}
+		else if((buttonD & 0x1F) == 0x02)
+ 30c:	82 30       	cpi	r24, 0x02	; 2
+ 30e:	41 f4       	brne	.+16     	; 0x320 <MenuScreen+0x60>
+		{
+			MULT = 1;
+ 310:	81 e0       	ldi	r24, 0x01	; 1
+ 312:	80 93 07 02 	sts	0x0207, r24	; 0x800207 <MULT>
+			SINGLE = 0;
+ 316:	10 92 08 02 	sts	0x0208, r1	; 0x800208 <SINGLE>
+			Menu = wait;
+ 31a:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+ 31e:	d0 c0       	rjmp	.+416    	; 0x4c0 <__LOCK_REGION_LENGTH__+0xc0>
+		}
+		else if((buttonD & 0x1F) == 0x04)
+ 320:	84 30       	cpi	r24, 0x04	; 4
+ 322:	09 f0       	breq	.+2      	; 0x326 <MenuScreen+0x66>
+ 324:	bc c0       	rjmp	.+376    	; 0x49e <__LOCK_REGION_LENGTH__+0x9e>
+		{
+			Menu = rwait;
+ 326:	8a e0       	ldi	r24, 0x0A	; 10
+ 328:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+ 32c:	08 95       	ret
+ 32e:	80 91 12 02 	lds	r24, 0x0212	; 0x800212 <buttonD>
+ 332:	8f 71       	andi	r24, 0x1F	; 31
+		}
+		break;
+		
+		case wait:
+		if((buttonD & 0x1F) != 0)
+ 334:	91 f0       	breq	.+36     	; 0x35a <MenuScreen+0x9a>
+		{
+			if((buttonD & 0x1F) == 0x01)
+ 336:	81 30       	cpi	r24, 0x01	; 1
+ 338:	29 f4       	brne	.+10     	; 0x344 <MenuScreen+0x84>
+			{
+				SINGLE = 1;
+ 33a:	80 93 08 02 	sts	0x0208, r24	; 0x800208 <SINGLE>
+				MULT = 0;
+ 33e:	10 92 07 02 	sts	0x0207, r1	; 0x800207 <MULT>
+ 342:	07 c0       	rjmp	.+14     	; 0x352 <MenuScreen+0x92>
+			}
+			else if((buttonD & 0x1F) == 0x02)
+ 344:	82 30       	cpi	r24, 0x02	; 2
+ 346:	29 f4       	brne	.+10     	; 0x352 <MenuScreen+0x92>
+			{
+				MULT = 1;
+ 348:	81 e0       	ldi	r24, 0x01	; 1
+ 34a:	80 93 07 02 	sts	0x0207, r24	; 0x800207 <MULT>
+				SINGLE = 0;
+ 34e:	10 92 08 02 	sts	0x0208, r1	; 0x800208 <SINGLE>
+			}
+			
+			Menu= wait;
+ 352:	81 e0       	ldi	r24, 0x01	; 1
+ 354:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+ 358:	b3 c0       	rjmp	.+358    	; 0x4c0 <__LOCK_REGION_LENGTH__+0xc0>
+		}
+		else
+		Menu = difficulty;
+ 35a:	82 e0       	ldi	r24, 0x02	; 2
+ 35c:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+ 360:	b2 c0       	rjmp	.+356    	; 0x4c6 <__LOCK_REGION_LENGTH__+0xc6>
+ 362:	80 91 12 02 	lds	r24, 0x0212	; 0x800212 <buttonD>
+ 366:	8f 71       	andi	r24, 0x1F	; 31
+		break;
+		
+		case difficulty:
+		if((buttonD & 0x1F) == 0)
+ 368:	09 f4       	brne	.+2      	; 0x36c <MenuScreen+0xac>
+ 36a:	ad c0       	rjmp	.+346    	; 0x4c6 <__LOCK_REGION_LENGTH__+0xc6>
+		Menu = difficulty;
+		else if((buttonD & 0x1F) == 0x01)
+ 36c:	81 30       	cpi	r24, 0x01	; 1
+ 36e:	49 f4       	brne	.+18     	; 0x382 <MenuScreen+0xc2>
+		{
+			DIFF = 2;
+ 370:	82 e0       	ldi	r24, 0x02	; 2
+ 372:	80 93 06 02 	sts	0x0206, r24	; 0x800206 <DIFF>
+			Menu = play;
+ 376:	83 e0       	ldi	r24, 0x03	; 3
+ 378:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+			WRITE = 0;
+ 37c:	10 92 0a 02 	sts	0x020A, r1	; 0x80020a <WRITE>
+ 380:	af c0       	rjmp	.+350    	; 0x4e0 <__LOCK_REGION_LENGTH__+0xe0>
+		}
+		else if((buttonD & 0x1F) == 0x02)
+ 382:	82 30       	cpi	r24, 0x02	; 2
+ 384:	09 f0       	breq	.+2      	; 0x388 <MenuScreen+0xc8>
+ 386:	9f c0       	rjmp	.+318    	; 0x4c6 <__LOCK_REGION_LENGTH__+0xc6>
+		{
+			DIFF = 1;
+ 388:	81 e0       	ldi	r24, 0x01	; 1
+ 38a:	80 93 06 02 	sts	0x0206, r24	; 0x800206 <DIFF>
+			Menu = play;
+ 38e:	83 e0       	ldi	r24, 0x03	; 3
+ 390:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+			WRITE = 0;
+ 394:	10 92 0a 02 	sts	0x020A, r1	; 0x80020a <WRITE>
+ 398:	a3 c0       	rjmp	.+326    	; 0x4e0 <__LOCK_REGION_LENGTH__+0xe0>
+		else
+		Menu = difficulty;
+		break;
+		
+		case play:
+		Menu = wait_score;
+ 39a:	84 e0       	ldi	r24, 0x04	; 4
+ 39c:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+		break;
+ 3a0:	08 95       	ret
+		
+		case wait_score:
+		if(!P1SCORE && !P2SCORE)
+ 3a2:	80 91 03 02 	lds	r24, 0x0203	; 0x800203 <P1SCORE>
+ 3a6:	81 11       	cpse	r24, r1
+ 3a8:	06 c0       	rjmp	.+12     	; 0x3b6 <MenuScreen+0xf6>
+ 3aa:	80 91 02 02 	lds	r24, 0x0202	; 0x800202 <P2SCORE>
+ 3ae:	88 23       	and	r24, r24
+ 3b0:	09 f4       	brne	.+2      	; 0x3b4 <MenuScreen+0xf4>
+ 3b2:	28 c1       	rjmp	.+592    	; 0x604 <__LOCK_REGION_LENGTH__+0x204>
+ 3b4:	04 c0       	rjmp	.+8      	; 0x3be <MenuScreen+0xfe>
+		Menu = wait_score;
+		else if(P1SCORE)
+		Menu = writeP1;
+ 3b6:	85 e0       	ldi	r24, 0x05	; 5
+ 3b8:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+ 3bc:	a0 c0       	rjmp	.+320    	; 0x4fe <__LOCK_REGION_LENGTH__+0xfe>
+		else if(P2SCORE)
+		Menu = WriteP2;
+ 3be:	86 e0       	ldi	r24, 0x06	; 6
+ 3c0:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+ 3c4:	a3 c0       	rjmp	.+326    	; 0x50c <__LOCK_REGION_LENGTH__+0x10c>
+		break;
+		
+		case writeP1:
+		if(P1 == 7)
+ 3c6:	80 91 05 02 	lds	r24, 0x0205	; 0x800205 <P1>
+ 3ca:	87 30       	cpi	r24, 0x07	; 7
+ 3cc:	19 f4       	brne	.+6      	; 0x3d4 <MenuScreen+0x114>
+		Menu = winP1;
+ 3ce:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+ 3d2:	a3 c0       	rjmp	.+326    	; 0x51a <__LOCK_REGION_LENGTH__+0x11a>
+		else
+		Menu = wait_score;
+ 3d4:	84 e0       	ldi	r24, 0x04	; 4
+ 3d6:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+ 3da:	08 95       	ret
+		break;
+		
+		case WriteP2:
+		if(P2 == 7)
+ 3dc:	80 91 04 02 	lds	r24, 0x0204	; 0x800204 <P2>
+ 3e0:	87 30       	cpi	r24, 0x07	; 7
+ 3e2:	21 f4       	brne	.+8      	; 0x3ec <MenuScreen+0x12c>
+		Menu = winP2;
+ 3e4:	88 e0       	ldi	r24, 0x08	; 8
+ 3e6:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+ 3ea:	b8 c0       	rjmp	.+368    	; 0x55c <__LOCK_REGION_LENGTH__+0x15c>
+		else
+		Menu = wait_score;
+ 3ec:	84 e0       	ldi	r24, 0x04	; 4
+ 3ee:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+ 3f2:	08 95       	ret
+		break;
+		
+		case winP1:
+		Menu = holdwin;
+ 3f4:	89 e0       	ldi	r24, 0x09	; 9
+ 3f6:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+		break;
+ 3fa:	d1 c0       	rjmp	.+418    	; 0x59e <__LOCK_REGION_LENGTH__+0x19e>
+		case winP2:
+		Menu = holdwin;
+ 3fc:	89 e0       	ldi	r24, 0x09	; 9
+ 3fe:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+		break;
+ 402:	cd c0       	rjmp	.+410    	; 0x59e <__LOCK_REGION_LENGTH__+0x19e>
+		
+		case holdwin:
+		MULT = 0;
+ 404:	10 92 07 02 	sts	0x0207, r1	; 0x800207 <MULT>
+		SINGLE = 0;
+ 408:	10 92 08 02 	sts	0x0208, r1	; 0x800208 <SINGLE>
+		if(wincounter == 50000)
+ 40c:	80 91 00 02 	lds	r24, 0x0200	; 0x800200 <wincounter>
+ 410:	90 91 01 02 	lds	r25, 0x0201	; 0x800201 <wincounter+0x1>
+ 414:	80 35       	cpi	r24, 0x50	; 80
+ 416:	93 4c       	sbci	r25, 0xC3	; 195
+ 418:	39 f4       	brne	.+14     	; 0x428 <__LOCK_REGION_LENGTH__+0x28>
+		{
+			wincounter = 0;
+ 41a:	10 92 01 02 	sts	0x0201, r1	; 0x800201 <wincounter+0x1>
+ 41e:	10 92 00 02 	sts	0x0200, r1	; 0x800200 <wincounter>
+			Menu = home;
+ 422:	10 92 17 02 	sts	0x0217, r1	; 0x800217 <Menu>
+ 426:	3b c0       	rjmp	.+118    	; 0x49e <__LOCK_REGION_LENGTH__+0x9e>
+		}
+		else
+		Menu = holdwin;
+ 428:	89 e0       	ldi	r24, 0x09	; 9
+ 42a:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+ 42e:	b7 c0       	rjmp	.+366    	; 0x59e <__LOCK_REGION_LENGTH__+0x19e>
+		break;
+		
+		case rwait:
+		if((buttonD & 0x1F) != 0)
+ 430:	80 91 12 02 	lds	r24, 0x0212	; 0x800212 <buttonD>
+ 434:	8f 71       	andi	r24, 0x1F	; 31
+ 436:	09 f0       	breq	.+2      	; 0x43a <__LOCK_REGION_LENGTH__+0x3a>
+ 438:	e5 c0       	rjmp	.+458    	; 0x604 <__LOCK_REGION_LENGTH__+0x204>
+		{
+			Menu = rwait;
+		}
+		else
+		Menu = rwait1;
+ 43a:	8b e0       	ldi	r24, 0x0B	; 11
+ 43c:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+ 440:	c0 c0       	rjmp	.+384    	; 0x5c2 <__LOCK_REGION_LENGTH__+0x1c2>
+		break;
+		
+		case rwait1:
+		Menu = rpage1;
+ 442:	8c e0       	ldi	r24, 0x0C	; 12
+ 444:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+		break;
+ 448:	08 95       	ret
+		
+		case rpage1:
+		if((buttonD & 0x1F) == 0)
+ 44a:	80 91 12 02 	lds	r24, 0x0212	; 0x800212 <buttonD>
+ 44e:	8f 71       	andi	r24, 0x1F	; 31
+ 450:	84 30       	cpi	r24, 0x04	; 4
+ 452:	09 f0       	breq	.+2      	; 0x456 <__LOCK_REGION_LENGTH__+0x56>
+ 454:	d7 c0       	rjmp	.+430    	; 0x604 <__LOCK_REGION_LENGTH__+0x204>
+		{
+			Menu = rpage1;
+		}
+		else if((buttonD & 0x1F) == 0x04)
+		Menu = rwait3;
+ 456:	8d e0       	ldi	r24, 0x0D	; 13
+ 458:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+ 45c:	be c0       	rjmp	.+380    	; 0x5da <__LOCK_REGION_LENGTH__+0x1da>
+		break;
+		
+		case rwait3:
+		Menu = rpage3;
+ 45e:	8e e0       	ldi	r24, 0x0E	; 14
+ 460:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+		break;
+ 464:	08 95       	ret
+		
+		case rpage3:
+		if((buttonD & 0x1F) == 0)
+ 466:	80 91 12 02 	lds	r24, 0x0212	; 0x800212 <buttonD>
+ 46a:	8f 71       	andi	r24, 0x1F	; 31
+ 46c:	84 30       	cpi	r24, 0x04	; 4
+ 46e:	09 f0       	breq	.+2      	; 0x472 <__LOCK_REGION_LENGTH__+0x72>
+ 470:	c9 c0       	rjmp	.+402    	; 0x604 <__LOCK_REGION_LENGTH__+0x204>
+		{
+			Menu = rpage3;
+		}
+		else if((buttonD & 0x1F) == 0x04)
+		Menu = rwait4;
+ 472:	8f e0       	ldi	r24, 0x0F	; 15
+ 474:	80 93 17 02 	sts	0x0217, r24	; 0x800217 <Menu>
+ 478:	c3 c0       	rjmp	.+390    	; 0x600 <__LOCK_REGION_LENGTH__+0x200>
+		break;
+		case rwait4:
+		if((buttonD & 0x1F) != 0)
+ 47a:	80 91 12 02 	lds	r24, 0x0212	; 0x800212 <buttonD>
+ 47e:	8f 71       	andi	r24, 0x1F	; 31
+ 480:	09 f0       	breq	.+2      	; 0x484 <__LOCK_REGION_LENGTH__+0x84>
+ 482:	be c0       	rjmp	.+380    	; 0x600 <__LOCK_REGION_LENGTH__+0x200>
+		{
+			Menu = rwait4;
+		}
+		else
+		Menu = home;
+ 484:	10 92 17 02 	sts	0x0217, r1	; 0x800217 <Menu>
+ 488:	0a c0       	rjmp	.+20     	; 0x49e <__LOCK_REGION_LENGTH__+0x9e>
+		break;
+		
+	}
+	switch(Menu)
+ 48a:	8e 2f       	mov	r24, r30
+ 48c:	90 e0       	ldi	r25, 0x00	; 0
+ 48e:	80 31       	cpi	r24, 0x10	; 16
+ 490:	91 05       	cpc	r25, r1
+ 492:	08 f0       	brcs	.+2      	; 0x496 <__LOCK_REGION_LENGTH__+0x96>
+ 494:	b7 c0       	rjmp	.+366    	; 0x604 <__LOCK_REGION_LENGTH__+0x204>
+ 496:	fc 01       	movw	r30, r24
+ 498:	ea 5a       	subi	r30, 0xAA	; 170
+ 49a:	ff 4f       	sbci	r31, 0xFF	; 255
+ 49c:	75 c5       	rjmp	.+2794   	; 0xf88 <__tablejump2__>
+	{
+		case home:
+		FINISH = 0;
+ 49e:	10 92 0b 02 	sts	0x020B, r1	; 0x80020b <FINISH>
+		READY = 0;
+ 4a2:	10 92 09 02 	sts	0x0209, r1	; 0x800209 <READY>
+		if(WRITE == 0)
+ 4a6:	80 91 0a 02 	lds	r24, 0x020A	; 0x80020a <WRITE>
+ 4aa:	81 11       	cpse	r24, r1
+		{
+			LCD_ClearScreen();
+ 4ac:	ab c0       	rjmp	.+342    	; 0x604 <__LOCK_REGION_LENGTH__+0x204>
+ 4ae:	48 de       	rcall	.-880    	; 0x140 <LCD_ClearScreen>
+			LCD_DisplayString(1, "Play: 1P or 2P  Records:");
+ 4b0:	69 e2       	ldi	r22, 0x29	; 41
+ 4b2:	71 e0       	ldi	r23, 0x01	; 1
+ 4b4:	81 e0       	ldi	r24, 0x01	; 1
+ 4b6:	67 de       	rcall	.-818    	; 0x186 <LCD_DisplayString>
+			WRITE = 1;
+ 4b8:	81 e0       	ldi	r24, 0x01	; 1
+ 4ba:	80 93 0a 02 	sts	0x020A, r24	; 0x80020a <WRITE>
+ 4be:	08 95       	ret
+		}
+		break;
+		
+		case wait:
+		WRITE = 0;
+ 4c0:	10 92 0a 02 	sts	0x020A, r1	; 0x80020a <WRITE>
+		break;
+ 4c4:	08 95       	ret
+		
+		case difficulty:
+		if(WRITE == 0)
+ 4c6:	80 91 0a 02 	lds	r24, 0x020A	; 0x80020a <WRITE>
+ 4ca:	81 11       	cpse	r24, r1
+		{
+			LCD_ClearScreen();
+ 4cc:	9b c0       	rjmp	.+310    	; 0x604 <__LOCK_REGION_LENGTH__+0x204>
+			LCD_DisplayString(1, "Difficulty:     1=Easy  2=Hard");
+ 4ce:	38 de       	rcall	.-912    	; 0x140 <LCD_ClearScreen>
+ 4d0:	62 e4       	ldi	r22, 0x42	; 66
+ 4d2:	71 e0       	ldi	r23, 0x01	; 1
+ 4d4:	81 e0       	ldi	r24, 0x01	; 1
+ 4d6:	57 de       	rcall	.-850    	; 0x186 <LCD_DisplayString>
+			WRITE = 1;
+ 4d8:	81 e0       	ldi	r24, 0x01	; 1
+ 4da:	80 93 0a 02 	sts	0x020A, r24	; 0x80020a <WRITE>
+ 4de:	08 95       	ret
+		}
+		break;
+		
+		case play:
+		READY = 1;
+ 4e0:	81 e0       	ldi	r24, 0x01	; 1
+ 4e2:	80 93 09 02 	sts	0x0209, r24	; 0x800209 <READY>
+		if(WRITE == 0)
+ 4e6:	80 91 0a 02 	lds	r24, 0x020A	; 0x80020a <WRITE>
+ 4ea:	81 11       	cpse	r24, r1
+		{
+			LCD_DisplayString(1, "Score:          P1:0       P2:0");
+ 4ec:	8b c0       	rjmp	.+278    	; 0x604 <__LOCK_REGION_LENGTH__+0x204>
+ 4ee:	61 e6       	ldi	r22, 0x61	; 97
+ 4f0:	71 e0       	ldi	r23, 0x01	; 1
+ 4f2:	81 e0       	ldi	r24, 0x01	; 1
+			WRITE = 1;
+ 4f4:	48 de       	rcall	.-880    	; 0x186 <LCD_DisplayString>
+ 4f6:	81 e0       	ldi	r24, 0x01	; 1
+ 4f8:	80 93 0a 02 	sts	0x020A, r24	; 0x80020a <WRITE>
+		
+		case wait_score:
+		break;
+		
+		case writeP1:
+		LCD_Cursor(20);
+ 4fc:	08 95       	ret
+		LCD_WriteData(P1 + '0');
+ 4fe:	84 e1       	ldi	r24, 0x14	; 20
+ 500:	22 de       	rcall	.-956    	; 0x146 <LCD_Cursor>
+ 502:	80 91 05 02 	lds	r24, 0x0205	; 0x800205 <P1>
+		break;
+ 506:	80 5d       	subi	r24, 0xD0	; 208
+		
+		case WriteP2:
+		LCD_Cursor(31);
+ 508:	35 ce       	rjmp	.-918    	; 0x174 <LCD_WriteData>
+ 50a:	08 95       	ret
+ 50c:	8f e1       	ldi	r24, 0x1F	; 31
+		LCD_WriteData(P2 + '0');
+ 50e:	1b de       	rcall	.-970    	; 0x146 <LCD_Cursor>
+ 510:	80 91 04 02 	lds	r24, 0x0204	; 0x800204 <P2>
+ 514:	80 5d       	subi	r24, 0xD0	; 208
+		break;
+ 516:	2e ce       	rjmp	.-932    	; 0x174 <LCD_WriteData>
+		
+		case winP1:
+		MULT = 0;
+ 518:	08 95       	ret
+		SINGLE = 0;
+ 51a:	10 92 07 02 	sts	0x0207, r1	; 0x800207 <MULT>
+		READY = 0; 
+		LCD_DisplayString(1, "    P1 WINS!       GREAT JOB!");LCD_Cursor(29);LCD_WriteData(1);
+ 51e:	10 92 08 02 	sts	0x0208, r1	; 0x800208 <SINGLE>
+ 522:	10 92 09 02 	sts	0x0209, r1	; 0x800209 <READY>
+ 526:	61 e8       	ldi	r22, 0x81	; 129
+ 528:	71 e0       	ldi	r23, 0x01	; 1
+ 52a:	81 e0       	ldi	r24, 0x01	; 1
+ 52c:	2c de       	rcall	.-936    	; 0x186 <LCD_DisplayString>
+ 52e:	8d e1       	ldi	r24, 0x1D	; 29
+		write_eeprom_word(&my_eeprom_array[0], read_eeprom_word(&my_eeprom_array[0]) + 1);
+ 530:	0a de       	rcall	.-1004   	; 0x146 <LCD_Cursor>
+ 532:	81 e0       	ldi	r24, 0x01	; 1
+ 534:	1f de       	rcall	.-962    	; 0x174 <LCD_WriteData>
+ 536:	80 e0       	ldi	r24, 0x00	; 0
+ 538:	90 e0       	ldi	r25, 0x00	; 0
+ 53a:	2f d5       	rcall	.+2654   	; 0xf9a <eeprom_read_word>
+ 53c:	bc 01       	movw	r22, r24
+ 53e:	6f 5f       	subi	r22, 0xFF	; 255
+ 540:	7f 4f       	sbci	r23, 0xFF	; 255
+ 542:	80 e0       	ldi	r24, 0x00	; 0
+		write_eeprom_word(&my_eeprom_array[3], read_eeprom_word(&my_eeprom_array[3]) + 1);
+ 544:	90 e0       	ldi	r25, 0x00	; 0
+ 546:	2e d5       	rcall	.+2652   	; 0xfa4 <eeprom_write_word>
+ 548:	83 e0       	ldi	r24, 0x03	; 3
+ 54a:	90 e0       	ldi	r25, 0x00	; 0
+ 54c:	26 d5       	rcall	.+2636   	; 0xf9a <eeprom_read_word>
+ 54e:	bc 01       	movw	r22, r24
+ 550:	6f 5f       	subi	r22, 0xFF	; 255
+ 552:	7f 4f       	sbci	r23, 0xFF	; 255
+		break;
+ 554:	83 e0       	ldi	r24, 0x03	; 3
+		case winP2:
+		MULT = 0;
+ 556:	90 e0       	ldi	r25, 0x00	; 0
+ 558:	25 c5       	rjmp	.+2634   	; 0xfa4 <eeprom_write_word>
+		SINGLE = 0;
+ 55a:	08 95       	ret
+ 55c:	10 92 07 02 	sts	0x0207, r1	; 0x800207 <MULT>
+		READY = 0;
+		LCD_DisplayString(1, "    P2 WINS!       GREAT JOB!");LCD_Cursor(29);LCD_WriteData(1);
+ 560:	10 92 08 02 	sts	0x0208, r1	; 0x800208 <SINGLE>
+ 564:	10 92 09 02 	sts	0x0209, r1	; 0x800209 <READY>
+ 568:	6f e9       	ldi	r22, 0x9F	; 159
+ 56a:	71 e0       	ldi	r23, 0x01	; 1
+ 56c:	81 e0       	ldi	r24, 0x01	; 1
+ 56e:	0b de       	rcall	.-1002   	; 0x186 <LCD_DisplayString>
+ 570:	8d e1       	ldi	r24, 0x1D	; 29
+		write_eeprom_word(&my_eeprom_array[0], read_eeprom_word(&my_eeprom_array[0]) + 1);
+ 572:	e9 dd       	rcall	.-1070   	; 0x146 <LCD_Cursor>
+ 574:	81 e0       	ldi	r24, 0x01	; 1
+ 576:	fe dd       	rcall	.-1028   	; 0x174 <LCD_WriteData>
+ 578:	80 e0       	ldi	r24, 0x00	; 0
+ 57a:	90 e0       	ldi	r25, 0x00	; 0
+ 57c:	0e d5       	rcall	.+2588   	; 0xf9a <eeprom_read_word>
+ 57e:	bc 01       	movw	r22, r24
+ 580:	6f 5f       	subi	r22, 0xFF	; 255
+ 582:	7f 4f       	sbci	r23, 0xFF	; 255
+ 584:	80 e0       	ldi	r24, 0x00	; 0
+ 586:	90 e0       	ldi	r25, 0x00	; 0
+		write_eeprom_word(&my_eeprom_array[5], read_eeprom_word(&my_eeprom_array[5]) + 1);
+ 588:	0d d5       	rcall	.+2586   	; 0xfa4 <eeprom_write_word>
+ 58a:	85 e0       	ldi	r24, 0x05	; 5
+ 58c:	90 e0       	ldi	r25, 0x00	; 0
+ 58e:	05 d5       	rcall	.+2570   	; 0xf9a <eeprom_read_word>
+ 590:	bc 01       	movw	r22, r24
+ 592:	6f 5f       	subi	r22, 0xFF	; 255
+ 594:	7f 4f       	sbci	r23, 0xFF	; 255
+ 596:	85 e0       	ldi	r24, 0x05	; 5
+ 598:	90 e0       	ldi	r25, 0x00	; 0
+ 59a:	04 c5       	rjmp	.+2568   	; 0xfa4 <eeprom_write_word>
+		break;
+ 59c:	08 95       	ret
+		
+		case holdwin:
+		MULT = 0;
+ 59e:	10 92 07 02 	sts	0x0207, r1	; 0x800207 <MULT>
+		SINGLE = 0;
+		READY = 0;
+ 5a2:	10 92 08 02 	sts	0x0208, r1	; 0x800208 <SINGLE>
+		wincounter++;
+ 5a6:	10 92 09 02 	sts	0x0209, r1	; 0x800209 <READY>
+ 5aa:	80 91 00 02 	lds	r24, 0x0200	; 0x800200 <wincounter>
+ 5ae:	90 91 01 02 	lds	r25, 0x0201	; 0x800201 <wincounter+0x1>
+ 5b2:	01 96       	adiw	r24, 0x01	; 1
+		WRITE = 0;
+ 5b4:	90 93 01 02 	sts	0x0201, r25	; 0x800201 <wincounter+0x1>
+		
+		case rwait:
+		break;
+		
+		case rwait1:
+		LCD_DisplayString(1, "    RECORDS:    # Played: 0");
+ 5b8:	80 93 00 02 	sts	0x0200, r24	; 0x800200 <wincounter>
+ 5bc:	10 92 0a 02 	sts	0x020A, r1	; 0x80020a <WRITE>
+		LCD_Cursor(27);
+ 5c0:	08 95       	ret
+ 5c2:	6d eb       	ldi	r22, 0xBD	; 189
+		LCD_WriteData(read_eeprom_word(&my_eeprom_array[0]) + '0');
+ 5c4:	71 e0       	ldi	r23, 0x01	; 1
+ 5c6:	81 e0       	ldi	r24, 0x01	; 1
+ 5c8:	de dd       	rcall	.-1092   	; 0x186 <LCD_DisplayString>
+ 5ca:	8b e1       	ldi	r24, 0x1B	; 27
+ 5cc:	bc dd       	rcall	.-1160   	; 0x146 <LCD_Cursor>
+ 5ce:	80 e0       	ldi	r24, 0x00	; 0
+ 5d0:	90 e0       	ldi	r25, 0x00	; 0
+		break;
+ 5d2:	e3 d4       	rcall	.+2502   	; 0xf9a <eeprom_read_word>
+		
+		case rpage1:
+		break;
+		
+		case rwait3:
+		LCD_DisplayString(1, "WP1: 0   WP2: 0       END");
+ 5d4:	80 5d       	subi	r24, 0xD0	; 208
+ 5d6:	ce cd       	rjmp	.-1124   	; 0x174 <LCD_WriteData>
+ 5d8:	08 95       	ret
+ 5da:	69 ed       	ldi	r22, 0xD9	; 217
+ 5dc:	71 e0       	ldi	r23, 0x01	; 1
+		LCD_Cursor(6);
+ 5de:	81 e0       	ldi	r24, 0x01	; 1
+ 5e0:	d2 dd       	rcall	.-1116   	; 0x186 <LCD_DisplayString>
+ 5e2:	86 e0       	ldi	r24, 0x06	; 6
+		LCD_WriteData(read_eeprom_word(&my_eeprom_array[3]) + '0');
+ 5e4:	b0 dd       	rcall	.-1184   	; 0x146 <LCD_Cursor>
+ 5e6:	83 e0       	ldi	r24, 0x03	; 3
+ 5e8:	90 e0       	ldi	r25, 0x00	; 0
+ 5ea:	d7 d4       	rcall	.+2478   	; 0xf9a <eeprom_read_word>
+ 5ec:	80 5d       	subi	r24, 0xD0	; 208
+ 5ee:	c2 dd       	rcall	.-1148   	; 0x174 <LCD_WriteData>
+ 5f0:	8f e0       	ldi	r24, 0x0F	; 15
+		LCD_Cursor(15);
+ 5f2:	a9 dd       	rcall	.-1198   	; 0x146 <LCD_Cursor>
+ 5f4:	85 e0       	ldi	r24, 0x05	; 5
+ 5f6:	90 e0       	ldi	r25, 0x00	; 0
+		LCD_WriteData(read_eeprom_word(&my_eeprom_array[5]) + '0');
+ 5f8:	d0 d4       	rcall	.+2464   	; 0xf9a <eeprom_read_word>
+ 5fa:	80 5d       	subi	r24, 0xD0	; 208
+ 5fc:	bb cd       	rjmp	.-1162   	; 0x174 <LCD_WriteData>
+ 5fe:	08 95       	ret
+ 600:	10 92 0a 02 	sts	0x020A, r1	; 0x80020a <WRITE>
+ 604:	08 95       	ret
+
+00000606 <MatrixPlay>:
+		break;
+ 606:	80 91 13 02 	lds	r24, 0x0213	; 0x800213 <Matrix>
+		
+		case rpage3:
+		break;
+		
+		case rwait4:
+		WRITE = 0;
+ 60a:	81 30       	cpi	r24, 0x01	; 1
+ 60c:	f9 f0       	breq	.+62     	; 0x64c <MatrixPlay+0x46>
+
+unsigned char up = 1;
+unsigned short matrixcounter = 0;
+void MatrixPlay()
+{
+	switch(Matrix)
+ 60e:	28 f0       	brcs	.+10     	; 0x61a <MatrixPlay+0x14>
+ 610:	82 30       	cpi	r24, 0x02	; 2
+ 612:	39 f1       	breq	.+78     	; 0x662 <MatrixPlay+0x5c>
+ 614:	83 30       	cpi	r24, 0x03	; 3
+ 616:	81 f1       	breq	.+96     	; 0x678 <MatrixPlay+0x72>
+ 618:	3a c0       	rjmp	.+116    	; 0x68e <MatrixPlay+0x88>
+	{
+		case wait_Ready:
+		if(!READY)
+ 61a:	80 91 09 02 	lds	r24, 0x0209	; 0x800209 <READY>
+ 61e:	81 11       	cpse	r24, r1
+ 620:	11 c0       	rjmp	.+34     	; 0x644 <MatrixPlay+0x3e>
+		{
+			if(matrixcounter == 10000)
+ 622:	80 91 fe 01 	lds	r24, 0x01FE	; 0x8001fe <matrixcounter>
+ 626:	90 91 ff 01 	lds	r25, 0x01FF	; 0x8001ff <matrixcounter+0x1>
+ 62a:	80 31       	cpi	r24, 0x10	; 16
+ 62c:	97 42       	sbci	r25, 0x27	; 39
+ 62e:	b9 f5       	brne	.+110    	; 0x69e <MatrixPlay+0x98>
+			{
+				a = 3;
+ 630:	83 e0       	ldi	r24, 0x03	; 3
+ 632:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <a>
+				matrixcounter = 0;
+ 636:	10 92 ff 01 	sts	0x01FF, r1	; 0x8001ff <matrixcounter+0x1>
+ 63a:	10 92 fe 01 	sts	0x01FE, r1	; 0x8001fe <matrixcounter>
+				Matrix = wait_Ready;
+ 63e:	10 92 13 02 	sts	0x0213, r1	; 0x800213 <Matrix>
+ 642:	2d c0       	rjmp	.+90     	; 0x69e <MatrixPlay+0x98>
+			}
+			else
+			Matrix = wait_Ready;
+		}	
+		else if(READY)
+		Matrix = updateP1;
+ 644:	81 e0       	ldi	r24, 0x01	; 1
+ 646:	80 93 13 02 	sts	0x0213, r24	; 0x800213 <Matrix>
+ 64a:	42 c0       	rjmp	.+132    	; 0x6d0 <MatrixPlay+0xca>
+		break;
+		
+		case updateP1:
+		if(!READY)
+ 64c:	80 91 09 02 	lds	r24, 0x0209	; 0x800209 <READY>
+ 650:	81 11       	cpse	r24, r1
+ 652:	03 c0       	rjmp	.+6      	; 0x65a <MatrixPlay+0x54>
+		Matrix = wait_Ready;
+ 654:	10 92 13 02 	sts	0x0213, r1	; 0x800213 <Matrix>
+ 658:	22 c0       	rjmp	.+68     	; 0x69e <MatrixPlay+0x98>
+		else if(READY)
+		Matrix = updateP2;
+ 65a:	82 e0       	ldi	r24, 0x02	; 2
+ 65c:	80 93 13 02 	sts	0x0213, r24	; 0x800213 <Matrix>
+ 660:	42 c0       	rjmp	.+132    	; 0x6e6 <MatrixPlay+0xe0>
+		break;
+		
+		case updateP2:
+		if(!READY)
+ 662:	80 91 09 02 	lds	r24, 0x0209	; 0x800209 <READY>
+ 666:	81 11       	cpse	r24, r1
+ 668:	03 c0       	rjmp	.+6      	; 0x670 <MatrixPlay+0x6a>
+		Matrix = wait_Ready;
+ 66a:	10 92 13 02 	sts	0x0213, r1	; 0x800213 <Matrix>
+ 66e:	17 c0       	rjmp	.+46     	; 0x69e <MatrixPlay+0x98>
+		else if(READY)
+		Matrix = updateBall;
+ 670:	83 e0       	ldi	r24, 0x03	; 3
+ 672:	80 93 13 02 	sts	0x0213, r24	; 0x800213 <Matrix>
+ 676:	42 c0       	rjmp	.+132    	; 0x6fc <MatrixPlay+0xf6>
+		break;
+		
+		case updateBall:
+		if(!READY)
+ 678:	80 91 09 02 	lds	r24, 0x0209	; 0x800209 <READY>
+ 67c:	81 11       	cpse	r24, r1
+ 67e:	03 c0       	rjmp	.+6      	; 0x686 <MatrixPlay+0x80>
+		Matrix = wait_Ready;
+ 680:	10 92 13 02 	sts	0x0213, r1	; 0x800213 <Matrix>
+ 684:	0c c0       	rjmp	.+24     	; 0x69e <MatrixPlay+0x98>
+		else if(READY)
+		Matrix = updateP1;
+ 686:	81 e0       	ldi	r24, 0x01	; 1
+ 688:	80 93 13 02 	sts	0x0213, r24	; 0x800213 <Matrix>
+ 68c:	21 c0       	rjmp	.+66     	; 0x6d0 <MatrixPlay+0xca>
+		break;
+		
+	}
+	switch(Matrix)
+ 68e:	81 30       	cpi	r24, 0x01	; 1
+ 690:	f9 f0       	breq	.+62     	; 0x6d0 <MatrixPlay+0xca>
+ 692:	28 f0       	brcs	.+10     	; 0x69e <MatrixPlay+0x98>
+ 694:	82 30       	cpi	r24, 0x02	; 2
+ 696:	39 f1       	breq	.+78     	; 0x6e6 <MatrixPlay+0xe0>
+ 698:	83 30       	cpi	r24, 0x03	; 3
+ 69a:	f1 f5       	brne	.+124    	; 0x718 <MatrixPlay+0x112>
+ 69c:	2f c0       	rjmp	.+94     	; 0x6fc <MatrixPlay+0xf6>
+	{
+		case wait_Ready:
+		matrixcounter++;
+ 69e:	80 91 fe 01 	lds	r24, 0x01FE	; 0x8001fe <matrixcounter>
+ 6a2:	90 91 ff 01 	lds	r25, 0x01FF	; 0x8001ff <matrixcounter+0x1>
+ 6a6:	01 96       	adiw	r24, 0x01	; 1
+ 6a8:	90 93 ff 01 	sts	0x01FF, r25	; 0x8001ff <matrixcounter+0x1>
+ 6ac:	80 93 fe 01 	sts	0x01FE, r24	; 0x8001fe <matrixcounter>
+		PORTA = P1ROW_MOVEMENT[a];
+ 6b0:	e0 91 02 01 	lds	r30, 0x0102	; 0x800102 <a>
+ 6b4:	f0 e0       	ldi	r31, 0x00	; 0
+ 6b6:	e1 5e       	subi	r30, 0xE1	; 225
+ 6b8:	fe 4f       	sbci	r31, 0xFE	; 254
+ 6ba:	80 81       	ld	r24, Z
+ 6bc:	82 b9       	out	0x02, r24	; 2
+		PORTB = 0x7E;
+ 6be:	8e e7       	ldi	r24, 0x7E	; 126
+ 6c0:	85 b9       	out	0x05, r24	; 5
+		P1COL = 0xFE;
+ 6c2:	8e ef       	ldi	r24, 0xFE	; 254
+ 6c4:	80 93 1d 01 	sts	0x011D, r24	; 0x80011d <P1COL>
+		P2COL = 0x7F;
+ 6c8:	8f e7       	ldi	r24, 0x7F	; 127
+ 6ca:	80 93 15 01 	sts	0x0115, r24	; 0x800115 <P2COL>
+		break;
+ 6ce:	08 95       	ret
+		
+		case updateP1:
+		PORTA = P1ROW_MOVEMENT[P1index];
+ 6d0:	e0 91 1e 01 	lds	r30, 0x011E	; 0x80011e <P1index>
+ 6d4:	f0 e0       	ldi	r31, 0x00	; 0
+ 6d6:	e1 5e       	subi	r30, 0xE1	; 225
+ 6d8:	fe 4f       	sbci	r31, 0xFE	; 254
+ 6da:	80 81       	ld	r24, Z
+ 6dc:	82 b9       	out	0x02, r24	; 2
+		PORTB = P1COL;
+ 6de:	80 91 1d 01 	lds	r24, 0x011D	; 0x80011d <P1COL>
+ 6e2:	85 b9       	out	0x05, r24	; 5
+		break;
+ 6e4:	08 95       	ret
+		
+		case updateP2:
+		PORTA = P2ROW_MOVEMENT[P2index];
+ 6e6:	e0 91 16 01 	lds	r30, 0x0116	; 0x800116 <P2index>
+ 6ea:	f0 e0       	ldi	r31, 0x00	; 0
+ 6ec:	e9 5e       	subi	r30, 0xE9	; 233
+ 6ee:	fe 4f       	sbci	r31, 0xFE	; 254
+ 6f0:	80 81       	ld	r24, Z
+ 6f2:	82 b9       	out	0x02, r24	; 2
+		PORTB = P2COL;
+ 6f4:	80 91 15 01 	lds	r24, 0x0115	; 0x800115 <P2COL>
+ 6f8:	85 b9       	out	0x05, r24	; 5
+		break;
+ 6fa:	08 95       	ret
+		
+		case updateBall:
+		PORTA = BALLROW_MOVEMENT[BRindex];
+ 6fc:	e0 91 04 01 	lds	r30, 0x0104	; 0x800104 <BRindex>
+ 700:	f0 e0       	ldi	r31, 0x00	; 0
+ 702:	e3 5f       	subi	r30, 0xF3	; 243
+ 704:	fe 4f       	sbci	r31, 0xFE	; 254
+ 706:	80 81       	ld	r24, Z
+ 708:	82 b9       	out	0x02, r24	; 2
+		PORTB = BALLCOL_MOVEMENT[BCindex];
+ 70a:	e0 91 03 01 	lds	r30, 0x0103	; 0x800103 <BCindex>
+ 70e:	f0 e0       	ldi	r31, 0x00	; 0
+ 710:	eb 5f       	subi	r30, 0xFB	; 251
+ 712:	fe 4f       	sbci	r31, 0xFE	; 254
+ 714:	80 81       	ld	r24, Z
+ 716:	85 b9       	out	0x05, r24	; 5
+ 718:	08 95       	ret
+
+0000071a <MoveP1>:
+
+enum Movement_P1 {wait_Ready_p1, move_p1, up_p1, down_p1, holdp1} MovementP1;
+unsigned short counter1 = 0;
+void MoveP1()
+{
+	switch(MovementP1)
+ 71a:	80 91 16 02 	lds	r24, 0x0216	; 0x800216 <MovementP1>
+ 71e:	82 30       	cpi	r24, 0x02	; 2
+ 720:	71 f1       	breq	.+92     	; 0x77e <MoveP1+0x64>
+ 722:	28 f4       	brcc	.+10     	; 0x72e <MoveP1+0x14>
+ 724:	88 23       	and	r24, r24
+ 726:	41 f0       	breq	.+16     	; 0x738 <MoveP1+0x1e>
+ 728:	81 30       	cpi	r24, 0x01	; 1
+ 72a:	79 f0       	breq	.+30     	; 0x74a <MoveP1+0x30>
+ 72c:	3b c0       	rjmp	.+118    	; 0x7a4 <MoveP1+0x8a>
+ 72e:	83 30       	cpi	r24, 0x03	; 3
+ 730:	51 f1       	breq	.+84     	; 0x786 <MoveP1+0x6c>
+ 732:	84 30       	cpi	r24, 0x04	; 4
+ 734:	61 f1       	breq	.+88     	; 0x78e <MoveP1+0x74>
+ 736:	36 c0       	rjmp	.+108    	; 0x7a4 <MoveP1+0x8a>
+	{
+		case wait_Ready_p1:
+		if(!READY)
+ 738:	80 91 09 02 	lds	r24, 0x0209	; 0x800209 <READY>
+ 73c:	88 23       	and	r24, r24
+ 73e:	09 f4       	brne	.+2      	; 0x742 <MoveP1+0x28>
+ 740:	3e c0       	rjmp	.+124    	; 0x7be <MoveP1+0xa4>
+		MovementP1 = wait_Ready_p1;
+		else if (READY)
+		MovementP1 = move_p1;
+ 742:	81 e0       	ldi	r24, 0x01	; 1
+ 744:	80 93 16 02 	sts	0x0216, r24	; 0x800216 <MovementP1>
+ 748:	3f c0       	rjmp	.+126    	; 0x7c8 <MoveP1+0xae>
+		break;
+		
+		case move_p1:
+		if(READY)
+ 74a:	80 91 09 02 	lds	r24, 0x0209	; 0x800209 <READY>
+ 74e:	88 23       	and	r24, r24
+ 750:	99 f0       	breq	.+38     	; 0x778 <MoveP1+0x5e>
+		{
+			if((!(buttonD & 0x01) && !(buttonD & 0x02)) || ((buttonD & 0x01) && (buttonD & 0x02)))
+ 752:	80 91 12 02 	lds	r24, 0x0212	; 0x800212 <buttonD>
+ 756:	98 2f       	mov	r25, r24
+ 758:	93 70       	andi	r25, 0x03	; 3
+ 75a:	b1 f1       	breq	.+108    	; 0x7c8 <MoveP1+0xae>
+ 75c:	93 30       	cpi	r25, 0x03	; 3
+ 75e:	a1 f1       	breq	.+104    	; 0x7c8 <MoveP1+0xae>
+			MovementP1 = move_p1;
+			else if(buttonD & 0x01)
+ 760:	80 ff       	sbrs	r24, 0
+ 762:	04 c0       	rjmp	.+8      	; 0x76c <MoveP1+0x52>
+			MovementP1 = up_p1;
+ 764:	82 e0       	ldi	r24, 0x02	; 2
+ 766:	80 93 16 02 	sts	0x0216, r24	; 0x800216 <MovementP1>
+ 76a:	33 c0       	rjmp	.+102    	; 0x7d2 <MoveP1+0xb8>
+			else if(buttonD & 0x02)
+ 76c:	81 ff       	sbrs	r24, 1
+ 76e:	2c c0       	rjmp	.+88     	; 0x7c8 <MoveP1+0xae>
+			MovementP1 = down_p1;
+ 770:	83 e0       	ldi	r24, 0x03	; 3
+ 772:	80 93 16 02 	sts	0x0216, r24	; 0x800216 <MovementP1>
+ 776:	35 c0       	rjmp	.+106    	; 0x7e2 <MoveP1+0xc8>
+		}
+		else
+		MovementP1 = wait_Ready_p1;
+ 778:	10 92 16 02 	sts	0x0216, r1	; 0x800216 <MovementP1>
+ 77c:	20 c0       	rjmp	.+64     	; 0x7be <MoveP1+0xa4>
+		break;
+		
+		case up_p1:
+		MovementP1 = holdp1;
+ 77e:	84 e0       	ldi	r24, 0x04	; 4
+ 780:	80 93 16 02 	sts	0x0216, r24	; 0x800216 <MovementP1>
+		break;
+ 784:	36 c0       	rjmp	.+108    	; 0x7f2 <MoveP1+0xd8>
+		
+		case down_p1:
+		MovementP1 = holdp1;
+ 786:	84 e0       	ldi	r24, 0x04	; 4
+ 788:	80 93 16 02 	sts	0x0216, r24	; 0x800216 <MovementP1>
+		break;
+ 78c:	32 c0       	rjmp	.+100    	; 0x7f2 <MoveP1+0xd8>
+		
+		case holdp1:
+		if(counter1 == 10000)
+ 78e:	80 91 fc 01 	lds	r24, 0x01FC	; 0x8001fc <counter1>
+ 792:	90 91 fd 01 	lds	r25, 0x01FD	; 0x8001fd <counter1+0x1>
+ 796:	80 31       	cpi	r24, 0x10	; 16
+ 798:	97 42       	sbci	r25, 0x27	; 39
+ 79a:	59 f5       	brne	.+86     	; 0x7f2 <MoveP1+0xd8>
+		MovementP1 = move_p1;
+ 79c:	81 e0       	ldi	r24, 0x01	; 1
+ 79e:	80 93 16 02 	sts	0x0216, r24	; 0x800216 <MovementP1>
+ 7a2:	12 c0       	rjmp	.+36     	; 0x7c8 <MoveP1+0xae>
+		else
+		MovementP1 = holdp1;
+		break;
+	}
+	
+	switch(MovementP1)
+ 7a4:	82 30       	cpi	r24, 0x02	; 2
+ 7a6:	a9 f0       	breq	.+42     	; 0x7d2 <MoveP1+0xb8>
+ 7a8:	28 f4       	brcc	.+10     	; 0x7b4 <MoveP1+0x9a>
+ 7aa:	88 23       	and	r24, r24
+ 7ac:	41 f0       	breq	.+16     	; 0x7be <MoveP1+0xa4>
+ 7ae:	81 30       	cpi	r24, 0x01	; 1
+ 7b0:	49 f5       	brne	.+82     	; 0x804 <MoveP1+0xea>
+ 7b2:	0a c0       	rjmp	.+20     	; 0x7c8 <MoveP1+0xae>
+ 7b4:	83 30       	cpi	r24, 0x03	; 3
+ 7b6:	a9 f0       	breq	.+42     	; 0x7e2 <MoveP1+0xc8>
+ 7b8:	84 30       	cpi	r24, 0x04	; 4
+ 7ba:	21 f5       	brne	.+72     	; 0x804 <MoveP1+0xea>
+ 7bc:	1a c0       	rjmp	.+52     	; 0x7f2 <MoveP1+0xd8>
+	{
+		case wait_Ready_p1:
+		counter1 = 0;
+ 7be:	10 92 fd 01 	sts	0x01FD, r1	; 0x8001fd <counter1+0x1>
+ 7c2:	10 92 fc 01 	sts	0x01FC, r1	; 0x8001fc <counter1>
+		break;
+ 7c6:	08 95       	ret
+		case move_p1:
+		counter1 = 0;
+ 7c8:	10 92 fd 01 	sts	0x01FD, r1	; 0x8001fd <counter1+0x1>
+ 7cc:	10 92 fc 01 	sts	0x01FC, r1	; 0x8001fc <counter1>
+		break;
+ 7d0:	08 95       	ret
+		case up_p1:
+		if(P1index < 5)
+ 7d2:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <P1index>
+ 7d6:	85 30       	cpi	r24, 0x05	; 5
+ 7d8:	a8 f4       	brcc	.+42     	; 0x804 <MoveP1+0xea>
+		P1index++;
+ 7da:	8f 5f       	subi	r24, 0xFF	; 255
+ 7dc:	80 93 1e 01 	sts	0x011E, r24	; 0x80011e <P1index>
+ 7e0:	08 95       	ret
+		else
+		P1index = P1index;
+		break;
+		case down_p1:
+		if(P1index > 0)
+ 7e2:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <P1index>
+ 7e6:	88 23       	and	r24, r24
+ 7e8:	69 f0       	breq	.+26     	; 0x804 <MoveP1+0xea>
+		P1index--;
+ 7ea:	81 50       	subi	r24, 0x01	; 1
+ 7ec:	80 93 1e 01 	sts	0x011E, r24	; 0x80011e <P1index>
+ 7f0:	08 95       	ret
+		else
+		P1index = P1index;
+		break;
+		case holdp1:
+		counter1++;
+ 7f2:	80 91 fc 01 	lds	r24, 0x01FC	; 0x8001fc <counter1>
+ 7f6:	90 91 fd 01 	lds	r25, 0x01FD	; 0x8001fd <counter1+0x1>
+ 7fa:	01 96       	adiw	r24, 0x01	; 1
+ 7fc:	90 93 fd 01 	sts	0x01FD, r25	; 0x8001fd <counter1+0x1>
+ 800:	80 93 fc 01 	sts	0x01FC, r24	; 0x8001fc <counter1>
+ 804:	08 95       	ret
+
+00000806 <MoveP2>:
+//Movement P2
+enum Movement_P2 {wait_Ready_p2, move_p2, up_p2, down_p2, holdp2} MovementP2;
+unsigned short counter2 = 0;
+void MoveP2()
+{
+	switch(MovementP2)
+ 806:	80 91 14 02 	lds	r24, 0x0214	; 0x800214 <MovementP2>
+ 80a:	82 30       	cpi	r24, 0x02	; 2
+ 80c:	d9 f1       	breq	.+118    	; 0x884 <MoveP2+0x7e>
+ 80e:	28 f4       	brcc	.+10     	; 0x81a <MoveP2+0x14>
+ 810:	88 23       	and	r24, r24
+ 812:	41 f0       	breq	.+16     	; 0x824 <MoveP2+0x1e>
+ 814:	81 30       	cpi	r24, 0x01	; 1
+ 816:	c1 f0       	breq	.+48     	; 0x848 <MoveP2+0x42>
+ 818:	48 c0       	rjmp	.+144    	; 0x8aa <MoveP2+0xa4>
+ 81a:	83 30       	cpi	r24, 0x03	; 3
+ 81c:	b9 f1       	breq	.+110    	; 0x88c <MoveP2+0x86>
+ 81e:	84 30       	cpi	r24, 0x04	; 4
+ 820:	c9 f1       	breq	.+114    	; 0x894 <MoveP2+0x8e>
+ 822:	43 c0       	rjmp	.+134    	; 0x8aa <MoveP2+0xa4>
+	{
+		case wait_Ready_p2:
+		if(!READY && !MULT)
+ 824:	80 91 09 02 	lds	r24, 0x0209	; 0x800209 <READY>
+ 828:	88 23       	and	r24, r24
+ 82a:	09 f4       	brne	.+2      	; 0x82e <MoveP2+0x28>
+ 82c:	4b c0       	rjmp	.+150    	; 0x8c4 <MoveP2+0xbe>
+		MovementP2 = wait_Ready_p2;
+		else if (READY && MULT && !SINGLE)
+ 82e:	80 91 07 02 	lds	r24, 0x0207	; 0x800207 <MULT>
+ 832:	88 23       	and	r24, r24
+ 834:	09 f4       	brne	.+2      	; 0x838 <MoveP2+0x32>
+ 836:	46 c0       	rjmp	.+140    	; 0x8c4 <MoveP2+0xbe>
+ 838:	80 91 08 02 	lds	r24, 0x0208	; 0x800208 <SINGLE>
+ 83c:	81 11       	cpse	r24, r1
+ 83e:	42 c0       	rjmp	.+132    	; 0x8c4 <MoveP2+0xbe>
+		MovementP2 = move_p2;
+ 840:	81 e0       	ldi	r24, 0x01	; 1
+ 842:	80 93 14 02 	sts	0x0214, r24	; 0x800214 <MovementP2>
+ 846:	43 c0       	rjmp	.+134    	; 0x8ce <MoveP2+0xc8>
+		else
+		MovementP2 = wait_Ready_p2;
+		break;
+		
+		case move_p2:
+		if(!READY)
+ 848:	80 91 09 02 	lds	r24, 0x0209	; 0x800209 <READY>
+ 84c:	81 11       	cpse	r24, r1
+ 84e:	03 c0       	rjmp	.+6      	; 0x856 <MoveP2+0x50>
+		MovementP2 = wait_Ready_p2;
+ 850:	10 92 14 02 	sts	0x0214, r1	; 0x800214 <MovementP2>
+ 854:	37 c0       	rjmp	.+110    	; 0x8c4 <MoveP2+0xbe>
+		else if(READY && MULT)
+ 856:	80 91 07 02 	lds	r24, 0x0207	; 0x800207 <MULT>
+ 85a:	88 23       	and	r24, r24
+ 85c:	c1 f1       	breq	.+112    	; 0x8ce <MoveP2+0xc8>
+		{
+			if((!(buttonD & 0x04) && !(buttonD & 0x08)) || ((buttonD & 0x04) && (buttonD & 0x08)))
+ 85e:	80 91 12 02 	lds	r24, 0x0212	; 0x800212 <buttonD>
+ 862:	98 2f       	mov	r25, r24
+ 864:	9c 70       	andi	r25, 0x0C	; 12
+ 866:	99 f1       	breq	.+102    	; 0x8ce <MoveP2+0xc8>
+ 868:	9c 30       	cpi	r25, 0x0C	; 12
+ 86a:	89 f1       	breq	.+98     	; 0x8ce <MoveP2+0xc8>
+			MovementP2 = move_p2;
+			else if(buttonD & 0x04)
+ 86c:	82 ff       	sbrs	r24, 2
+ 86e:	04 c0       	rjmp	.+8      	; 0x878 <MoveP2+0x72>
+			MovementP2 = up_p2;
+ 870:	82 e0       	ldi	r24, 0x02	; 2
+ 872:	80 93 14 02 	sts	0x0214, r24	; 0x800214 <MovementP2>
+ 876:	30 c0       	rjmp	.+96     	; 0x8d8 <MoveP2+0xd2>
+			else if(buttonD & 0x08)
+ 878:	83 ff       	sbrs	r24, 3
+ 87a:	29 c0       	rjmp	.+82     	; 0x8ce <MoveP2+0xc8>
+			MovementP2 = down_p2;
+ 87c:	83 e0       	ldi	r24, 0x03	; 3
+ 87e:	80 93 14 02 	sts	0x0214, r24	; 0x800214 <MovementP2>
+ 882:	32 c0       	rjmp	.+100    	; 0x8e8 <MoveP2+0xe2>
+		}
+		break;
+		
+		case up_p2:
+		MovementP2 = holdp2;
+ 884:	84 e0       	ldi	r24, 0x04	; 4
+ 886:	80 93 14 02 	sts	0x0214, r24	; 0x800214 <MovementP2>
+		break;
+ 88a:	36 c0       	rjmp	.+108    	; 0x8f8 <MoveP2+0xf2>
+		
+		case down_p2:
+		MovementP2 = holdp2;
+ 88c:	84 e0       	ldi	r24, 0x04	; 4
+ 88e:	80 93 14 02 	sts	0x0214, r24	; 0x800214 <MovementP2>
+		break;
+ 892:	32 c0       	rjmp	.+100    	; 0x8f8 <MoveP2+0xf2>
+		
+		case holdp2:
+		if(counter2 == 10000)
+ 894:	80 91 fa 01 	lds	r24, 0x01FA	; 0x8001fa <counter2>
+ 898:	90 91 fb 01 	lds	r25, 0x01FB	; 0x8001fb <counter2+0x1>
+ 89c:	80 31       	cpi	r24, 0x10	; 16
+ 89e:	97 42       	sbci	r25, 0x27	; 39
+ 8a0:	59 f5       	brne	.+86     	; 0x8f8 <MoveP2+0xf2>
+		MovementP2 = move_p2;
+ 8a2:	81 e0       	ldi	r24, 0x01	; 1
+ 8a4:	80 93 14 02 	sts	0x0214, r24	; 0x800214 <MovementP2>
+ 8a8:	12 c0       	rjmp	.+36     	; 0x8ce <MoveP2+0xc8>
+		else
+		MovementP2 = holdp2;
+		break;
+	}
+	switch(MovementP2)
+ 8aa:	82 30       	cpi	r24, 0x02	; 2
+ 8ac:	a9 f0       	breq	.+42     	; 0x8d8 <MoveP2+0xd2>
+ 8ae:	28 f4       	brcc	.+10     	; 0x8ba <MoveP2+0xb4>
+ 8b0:	88 23       	and	r24, r24
+ 8b2:	41 f0       	breq	.+16     	; 0x8c4 <MoveP2+0xbe>
+ 8b4:	81 30       	cpi	r24, 0x01	; 1
+ 8b6:	49 f5       	brne	.+82     	; 0x90a <MoveP2+0x104>
+ 8b8:	0a c0       	rjmp	.+20     	; 0x8ce <MoveP2+0xc8>
+ 8ba:	83 30       	cpi	r24, 0x03	; 3
+ 8bc:	a9 f0       	breq	.+42     	; 0x8e8 <MoveP2+0xe2>
+ 8be:	84 30       	cpi	r24, 0x04	; 4
+ 8c0:	21 f5       	brne	.+72     	; 0x90a <MoveP2+0x104>
+ 8c2:	1a c0       	rjmp	.+52     	; 0x8f8 <MoveP2+0xf2>
+	{
+		case wait_Ready_p2:
+		counter2 = 0;
+ 8c4:	10 92 fb 01 	sts	0x01FB, r1	; 0x8001fb <counter2+0x1>
+ 8c8:	10 92 fa 01 	sts	0x01FA, r1	; 0x8001fa <counter2>
+		break;
+ 8cc:	08 95       	ret
+		case move_p2:
+		counter2 = 0;
+ 8ce:	10 92 fb 01 	sts	0x01FB, r1	; 0x8001fb <counter2+0x1>
+ 8d2:	10 92 fa 01 	sts	0x01FA, r1	; 0x8001fa <counter2>
+		break;
+ 8d6:	08 95       	ret
+		
+		case up_p2:
+		if(P2index < 5)
+ 8d8:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <P2index>
+ 8dc:	85 30       	cpi	r24, 0x05	; 5
+ 8de:	a8 f4       	brcc	.+42     	; 0x90a <MoveP2+0x104>
+		P2index++;
+ 8e0:	8f 5f       	subi	r24, 0xFF	; 255
+ 8e2:	80 93 16 01 	sts	0x0116, r24	; 0x800116 <P2index>
+ 8e6:	08 95       	ret
+		else
+		P2index = P2index;
+		break;
+		
+		case down_p2:
+		if(P2index > 0)
+ 8e8:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <P2index>
+ 8ec:	88 23       	and	r24, r24
+ 8ee:	69 f0       	breq	.+26     	; 0x90a <MoveP2+0x104>
+		P2index--;
+ 8f0:	81 50       	subi	r24, 0x01	; 1
+ 8f2:	80 93 16 01 	sts	0x0116, r24	; 0x800116 <P2index>
+ 8f6:	08 95       	ret
+		else
+		P2index = P2index;
+		break;
+		
+		case holdp2:
+		counter2++;
+ 8f8:	80 91 fa 01 	lds	r24, 0x01FA	; 0x8001fa <counter2>
+ 8fc:	90 91 fb 01 	lds	r25, 0x01FB	; 0x8001fb <counter2+0x1>
+ 900:	01 96       	adiw	r24, 0x01	; 1
+ 902:	90 93 fb 01 	sts	0x01FB, r25	; 0x8001fb <counter2+0x1>
+ 906:	80 93 fa 01 	sts	0x01FA, r24	; 0x8001fa <counter2>
+ 90a:	08 95       	ret
+
+0000090c <MoveP2bot>:
+//Movement P2BOT
+enum Movement_P2BOT {wait_Ready_p2bot, move_p2bot, up_p2bot, down_p2bot, holdp2bot} MovementP2bot;
+unsigned short counter2bot = 0;
+void MoveP2bot()
+{
+	switch(MovementP2bot)
+ 90c:	80 91 11 02 	lds	r24, 0x0211	; 0x800211 <MovementP2bot>
+ 910:	82 30       	cpi	r24, 0x02	; 2
+ 912:	c1 f1       	breq	.+112    	; 0x984 <MoveP2bot+0x78>
+ 914:	28 f4       	brcc	.+10     	; 0x920 <MoveP2bot+0x14>
+ 916:	88 23       	and	r24, r24
+ 918:	41 f0       	breq	.+16     	; 0x92a <MoveP2bot+0x1e>
+ 91a:	81 30       	cpi	r24, 0x01	; 1
+ 91c:	c1 f0       	breq	.+48     	; 0x94e <MoveP2bot+0x42>
+ 91e:	45 c0       	rjmp	.+138    	; 0x9aa <MoveP2bot+0x9e>
+ 920:	83 30       	cpi	r24, 0x03	; 3
+ 922:	a1 f1       	breq	.+104    	; 0x98c <MoveP2bot+0x80>
+ 924:	84 30       	cpi	r24, 0x04	; 4
+ 926:	b1 f1       	breq	.+108    	; 0x994 <MoveP2bot+0x88>
+ 928:	40 c0       	rjmp	.+128    	; 0x9aa <MoveP2bot+0x9e>
+	{
+		case wait_Ready_p2bot:
+		if(!READY && !SINGLE)
+ 92a:	80 91 09 02 	lds	r24, 0x0209	; 0x800209 <READY>
+ 92e:	88 23       	and	r24, r24
+ 930:	09 f4       	brne	.+2      	; 0x934 <MoveP2bot+0x28>
+ 932:	48 c0       	rjmp	.+144    	; 0x9c4 <MoveP2bot+0xb8>
+		MovementP2bot = wait_Ready_p2bot;
+		else if (READY && SINGLE && !MULT)
+ 934:	80 91 08 02 	lds	r24, 0x0208	; 0x800208 <SINGLE>
+ 938:	88 23       	and	r24, r24
+ 93a:	09 f4       	brne	.+2      	; 0x93e <MoveP2bot+0x32>
+ 93c:	43 c0       	rjmp	.+134    	; 0x9c4 <MoveP2bot+0xb8>
+ 93e:	80 91 07 02 	lds	r24, 0x0207	; 0x800207 <MULT>
+ 942:	81 11       	cpse	r24, r1
+ 944:	3f c0       	rjmp	.+126    	; 0x9c4 <MoveP2bot+0xb8>
+		MovementP2bot = move_p2bot;
+ 946:	81 e0       	ldi	r24, 0x01	; 1
+ 948:	80 93 11 02 	sts	0x0211, r24	; 0x800211 <MovementP2bot>
+ 94c:	40 c0       	rjmp	.+128    	; 0x9ce <MoveP2bot+0xc2>
+		else
+		MovementP2bot = wait_Ready_p2bot;
+		break;
+		
+		case move_p2bot:
+		if(!READY)
+ 94e:	80 91 09 02 	lds	r24, 0x0209	; 0x800209 <READY>
+ 952:	81 11       	cpse	r24, r1
+ 954:	03 c0       	rjmp	.+6      	; 0x95c <MoveP2bot+0x50>
+		MovementP2 = wait_Ready_p2bot;
+ 956:	10 92 14 02 	sts	0x0214, r1	; 0x800214 <MovementP2>
+ 95a:	39 c0       	rjmp	.+114    	; 0x9ce <MoveP2bot+0xc2>
+		else if(READY && SINGLE)
+ 95c:	80 91 08 02 	lds	r24, 0x0208	; 0x800208 <SINGLE>
+ 960:	88 23       	and	r24, r24
+ 962:	a9 f1       	breq	.+106    	; 0x9ce <MoveP2bot+0xc2>
+		{
+			if((BRindex < P2index))
+ 964:	90 91 04 01 	lds	r25, 0x0104	; 0x800104 <BRindex>
+ 968:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <P2index>
+ 96c:	98 17       	cp	r25, r24
+ 96e:	20 f4       	brcc	.+8      	; 0x978 <MoveP2bot+0x6c>
+			MovementP2bot = down_p2bot;
+ 970:	83 e0       	ldi	r24, 0x03	; 3
+ 972:	80 93 11 02 	sts	0x0211, r24	; 0x800211 <MovementP2bot>
+ 976:	38 c0       	rjmp	.+112    	; 0x9e8 <MoveP2bot+0xdc>
+			else if((BRindex > P2index))
+ 978:	89 17       	cp	r24, r25
+ 97a:	48 f5       	brcc	.+82     	; 0x9ce <MoveP2bot+0xc2>
+			MovementP2bot = up_p2bot;
+ 97c:	82 e0       	ldi	r24, 0x02	; 2
+ 97e:	80 93 11 02 	sts	0x0211, r24	; 0x800211 <MovementP2bot>
+ 982:	2a c0       	rjmp	.+84     	; 0x9d8 <MoveP2bot+0xcc>
+			MovementP2bot = move_p2bot;
+		}
+		break;
+		
+		case up_p2bot:
+		MovementP2bot = holdp2bot;
+ 984:	84 e0       	ldi	r24, 0x04	; 4
+ 986:	80 93 11 02 	sts	0x0211, r24	; 0x800211 <MovementP2bot>
+		break;
+ 98a:	36 c0       	rjmp	.+108    	; 0x9f8 <MoveP2bot+0xec>
+		
+		case down_p2bot:
+		MovementP2bot = holdp2bot;
+ 98c:	84 e0       	ldi	r24, 0x04	; 4
+ 98e:	80 93 11 02 	sts	0x0211, r24	; 0x800211 <MovementP2bot>
+		break;
+ 992:	32 c0       	rjmp	.+100    	; 0x9f8 <MoveP2bot+0xec>
+		
+		case holdp2bot:
+		if(counter2bot == 23000)
+ 994:	80 91 f8 01 	lds	r24, 0x01F8	; 0x8001f8 <counter2bot>
+ 998:	90 91 f9 01 	lds	r25, 0x01F9	; 0x8001f9 <counter2bot+0x1>
+ 99c:	88 3d       	cpi	r24, 0xD8	; 216
+ 99e:	99 45       	sbci	r25, 0x59	; 89
+ 9a0:	59 f5       	brne	.+86     	; 0x9f8 <MoveP2bot+0xec>
+		MovementP2bot = move_p2bot;
+ 9a2:	81 e0       	ldi	r24, 0x01	; 1
+ 9a4:	80 93 11 02 	sts	0x0211, r24	; 0x800211 <MovementP2bot>
+ 9a8:	12 c0       	rjmp	.+36     	; 0x9ce <MoveP2bot+0xc2>
+		else
+		MovementP2bot = holdp2bot;
+		break;
+		
+	}
+	switch(MovementP2bot)
+ 9aa:	82 30       	cpi	r24, 0x02	; 2
+ 9ac:	a9 f0       	breq	.+42     	; 0x9d8 <MoveP2bot+0xcc>
+ 9ae:	28 f4       	brcc	.+10     	; 0x9ba <MoveP2bot+0xae>
+ 9b0:	88 23       	and	r24, r24
+ 9b2:	41 f0       	breq	.+16     	; 0x9c4 <MoveP2bot+0xb8>
+ 9b4:	81 30       	cpi	r24, 0x01	; 1
+ 9b6:	49 f5       	brne	.+82     	; 0xa0a <MoveP2bot+0xfe>
+ 9b8:	0a c0       	rjmp	.+20     	; 0x9ce <MoveP2bot+0xc2>
+ 9ba:	83 30       	cpi	r24, 0x03	; 3
+ 9bc:	a9 f0       	breq	.+42     	; 0x9e8 <MoveP2bot+0xdc>
+ 9be:	84 30       	cpi	r24, 0x04	; 4
+ 9c0:	21 f5       	brne	.+72     	; 0xa0a <MoveP2bot+0xfe>
+ 9c2:	1a c0       	rjmp	.+52     	; 0x9f8 <MoveP2bot+0xec>
+	{
+		case wait_Ready_p2bot:
+		counter2bot = 0;
+ 9c4:	10 92 f9 01 	sts	0x01F9, r1	; 0x8001f9 <counter2bot+0x1>
+ 9c8:	10 92 f8 01 	sts	0x01F8, r1	; 0x8001f8 <counter2bot>
+		break;
+ 9cc:	08 95       	ret
+		
+		case move_p2bot:
+		counter2bot = 0;
+ 9ce:	10 92 f9 01 	sts	0x01F9, r1	; 0x8001f9 <counter2bot+0x1>
+ 9d2:	10 92 f8 01 	sts	0x01F8, r1	; 0x8001f8 <counter2bot>
+		break;
+ 9d6:	08 95       	ret
+		
+		case up_p2bot:
+		if(P2index < 5)
+ 9d8:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <P2index>
+ 9dc:	85 30       	cpi	r24, 0x05	; 5
+ 9de:	a8 f4       	brcc	.+42     	; 0xa0a <MoveP2bot+0xfe>
+		P2index++;
+ 9e0:	8f 5f       	subi	r24, 0xFF	; 255
+ 9e2:	80 93 16 01 	sts	0x0116, r24	; 0x800116 <P2index>
+ 9e6:	08 95       	ret
+		else
+		P2index = P2index;
+		break;
+		case down_p2bot:
+		if(P2index > 0)
+ 9e8:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <P2index>
+ 9ec:	88 23       	and	r24, r24
+ 9ee:	69 f0       	breq	.+26     	; 0xa0a <MoveP2bot+0xfe>
+		P2index--;
+ 9f0:	81 50       	subi	r24, 0x01	; 1
+ 9f2:	80 93 16 01 	sts	0x0116, r24	; 0x800116 <P2index>
+ 9f6:	08 95       	ret
+		else
+		P2index = P2index;
+		break;
+		
+		case holdp2bot:
+		counter2bot++;
+ 9f8:	80 91 f8 01 	lds	r24, 0x01F8	; 0x8001f8 <counter2bot>
+ 9fc:	90 91 f9 01 	lds	r25, 0x01F9	; 0x8001f9 <counter2bot+0x1>
+ a00:	01 96       	adiw	r24, 0x01	; 1
+ a02:	90 93 f9 01 	sts	0x01F9, r25	; 0x8001f9 <counter2bot+0x1>
+ a06:	80 93 f8 01 	sts	0x01F8, r24	; 0x8001f8 <counter2bot>
+ a0a:	08 95       	ret
+
+00000a0c <BallPlay>:
+unsigned short counterstart = 0;
+char hit = -1;
+char wall = -1;
+void BallPlay()
+{
+	switch(BallMove)
+ a0c:	80 91 15 02 	lds	r24, 0x0215	; 0x800215 <BallMove>
+ a10:	82 30       	cpi	r24, 0x02	; 2
+ a12:	f9 f0       	breq	.+62     	; 0xa52 <BallPlay+0x46>
+ a14:	28 f4       	brcc	.+10     	; 0xa20 <BallPlay+0x14>
+ a16:	88 23       	and	r24, r24
+ a18:	41 f0       	breq	.+16     	; 0xa2a <BallPlay+0x1e>
+ a1a:	81 30       	cpi	r24, 0x01	; 1
+ a1c:	79 f0       	breq	.+30     	; 0xa3c <BallPlay+0x30>
+ a1e:	68 c0       	rjmp	.+208    	; 0xaf0 <BallPlay+0xe4>
+ a20:	83 30       	cpi	r24, 0x03	; 3
+ a22:	19 f1       	breq	.+70     	; 0xa6a <BallPlay+0x5e>
+ a24:	84 30       	cpi	r24, 0x04	; 4
+ a26:	d9 f1       	breq	.+118    	; 0xa9e <BallPlay+0x92>
+ a28:	63 c0       	rjmp	.+198    	; 0xaf0 <BallPlay+0xe4>
+	{
+		case wait_Ready_ball:
+		if(!READY)
+ a2a:	80 91 09 02 	lds	r24, 0x0209	; 0x800209 <READY>
+ a2e:	88 23       	and	r24, r24
+ a30:	09 f4       	brne	.+2      	; 0xa34 <BallPlay+0x28>
+ a32:	6f c0       	rjmp	.+222    	; 0xb12 <BallPlay+0x106>
+		BallMove = wait_Ready_ball;
+		else if(READY)
+		BallMove = start;
+ a34:	81 e0       	ldi	r24, 0x01	; 1
+ a36:	80 93 15 02 	sts	0x0215, r24	; 0x800215 <BallMove>
+ a3a:	70 c0       	rjmp	.+224    	; 0xb1c <BallPlay+0x110>
+		break;
+		case start:
+		if(!READY)
+ a3c:	80 91 09 02 	lds	r24, 0x0209	; 0x800209 <READY>
+ a40:	81 11       	cpse	r24, r1
+ a42:	03 c0       	rjmp	.+6      	; 0xa4a <BallPlay+0x3e>
+		BallMove = wait_Ready_ball;
+ a44:	10 92 15 02 	sts	0x0215, r1	; 0x800215 <BallMove>
+ a48:	64 c0       	rjmp	.+200    	; 0xb12 <BallPlay+0x106>
+		else
+		BallMove = start_wait;
+ a4a:	82 e0       	ldi	r24, 0x02	; 2
+ a4c:	80 93 15 02 	sts	0x0215, r24	; 0x800215 <BallMove>
+ a50:	ad c0       	rjmp	.+346    	; 0xbac <BallPlay+0x1a0>
+		break;
+		case start_wait:
+		if(counterstart != 10000)
+ a52:	80 91 f4 01 	lds	r24, 0x01F4	; 0x8001f4 <__data_end>
+ a56:	90 91 f5 01 	lds	r25, 0x01F5	; 0x8001f5 <__data_end+0x1>
+ a5a:	80 31       	cpi	r24, 0x10	; 16
+ a5c:	97 42       	sbci	r25, 0x27	; 39
+ a5e:	09 f0       	breq	.+2      	; 0xa62 <BallPlay+0x56>
+ a60:	a5 c0       	rjmp	.+330    	; 0xbac <BallPlay+0x1a0>
+		BallMove = start_wait;
+		else if(counterstart == 10000)
+		{
+			counterstart = 0;
+			BallMove = move_ball;
+ a62:	83 e0       	ldi	r24, 0x03	; 3
+ a64:	80 93 15 02 	sts	0x0215, r24	; 0x800215 <BallMove>
+ a68:	af c0       	rjmp	.+350    	; 0xbc8 <BallPlay+0x1bc>
+		}
+		break;
+		case move_ball:
+		counterstart = 0;
+ a6a:	10 92 f5 01 	sts	0x01F5, r1	; 0x8001f5 <__data_end+0x1>
+ a6e:	10 92 f4 01 	sts	0x01F4, r1	; 0x8001f4 <__data_end>
+		if(BCindex == 0)
+ a72:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <BCindex>
+ a76:	81 11       	cpse	r24, r1
+ a78:	06 c0       	rjmp	.+12     	; 0xa86 <BallPlay+0x7a>
+		{
+			P2SCORE = 1;
+ a7a:	81 e0       	ldi	r24, 0x01	; 1
+ a7c:	80 93 02 02 	sts	0x0202, r24	; 0x800202 <P2SCORE>
+			BallMove = start;
+ a80:	80 93 15 02 	sts	0x0215, r24	; 0x800215 <BallMove>
+ a84:	4b c0       	rjmp	.+150    	; 0xb1c <BallPlay+0x110>
+		}
+		else if(BCindex == 7)
+ a86:	87 30       	cpi	r24, 0x07	; 7
+ a88:	31 f4       	brne	.+12     	; 0xa96 <BallPlay+0x8a>
+		{
+			P1SCORE = 1;
+ a8a:	81 e0       	ldi	r24, 0x01	; 1
+ a8c:	80 93 03 02 	sts	0x0203, r24	; 0x800203 <P1SCORE>
+			BallMove = start;
+ a90:	80 93 15 02 	sts	0x0215, r24	; 0x800215 <BallMove>
+ a94:	5f c0       	rjmp	.+190    	; 0xb54 <BallPlay+0x148>
+		}
+		else
+		BallMove = holdball;
+ a96:	84 e0       	ldi	r24, 0x04	; 4
+ a98:	80 93 15 02 	sts	0x0215, r24	; 0x800215 <BallMove>
+ a9c:	2f c2       	rjmp	.+1118   	; 0xefc <BallPlay+0x4f0>
+		break;
+		case holdball:
+		if(counterball != (7500 * DIFF))
+ a9e:	40 91 06 02 	lds	r20, 0x0206	; 0x800206 <DIFF>
+ aa2:	8c e4       	ldi	r24, 0x4C	; 76
+ aa4:	9d e1       	ldi	r25, 0x1D	; 29
+ aa6:	48 9f       	mul	r20, r24
+ aa8:	90 01       	movw	r18, r0
+ aaa:	49 9f       	mul	r20, r25
+ aac:	30 0d       	add	r19, r0
+ aae:	11 24       	eor	r1, r1
+ ab0:	80 91 f6 01 	lds	r24, 0x01F6	; 0x8001f6 <counterball>
+ ab4:	90 91 f7 01 	lds	r25, 0x01F7	; 0x8001f7 <counterball+0x1>
+ ab8:	28 17       	cp	r18, r24
+ aba:	39 07       	cpc	r19, r25
+ abc:	09 f0       	breq	.+2      	; 0xac0 <BallPlay+0xb4>
+ abe:	1e c2       	rjmp	.+1084   	; 0xefc <BallPlay+0x4f0>
+		BallMove = holdball;
+		else
+		{
+			counterball = 0;
+ ac0:	10 92 f7 01 	sts	0x01F7, r1	; 0x8001f7 <counterball+0x1>
+ ac4:	10 92 f6 01 	sts	0x01F6, r1	; 0x8001f6 <counterball>
+			if(P1SCORE)
+ ac8:	80 91 03 02 	lds	r24, 0x0203	; 0x800203 <P1SCORE>
+ acc:	88 23       	and	r24, r24
+ ace:	21 f0       	breq	.+8      	; 0xad8 <BallPlay+0xcc>
+			BallMove = start;
+ ad0:	81 e0       	ldi	r24, 0x01	; 1
+ ad2:	80 93 15 02 	sts	0x0215, r24	; 0x800215 <BallMove>
+ ad6:	3e c0       	rjmp	.+124    	; 0xb54 <BallPlay+0x148>
+			else if(P2SCORE)
+ ad8:	80 91 02 02 	lds	r24, 0x0202	; 0x800202 <P2SCORE>
+ adc:	88 23       	and	r24, r24
+ ade:	21 f0       	breq	.+8      	; 0xae8 <BallPlay+0xdc>
+			BallMove = start;
+ ae0:	81 e0       	ldi	r24, 0x01	; 1
+ ae2:	80 93 15 02 	sts	0x0215, r24	; 0x800215 <BallMove>
+ ae6:	1e c0       	rjmp	.+60     	; 0xb24 <BallPlay+0x118>
+			else
+			BallMove = move_ball;
+ ae8:	83 e0       	ldi	r24, 0x03	; 3
+ aea:	80 93 15 02 	sts	0x0215, r24	; 0x800215 <BallMove>
+ aee:	6c c0       	rjmp	.+216    	; 0xbc8 <BallPlay+0x1bc>
+		}
+		break;
+	}
+	switch(BallMove)
+ af0:	82 30       	cpi	r24, 0x02	; 2
+ af2:	09 f4       	brne	.+2      	; 0xaf6 <BallPlay+0xea>
+ af4:	5b c0       	rjmp	.+182    	; 0xbac <BallPlay+0x1a0>
+ af6:	30 f4       	brcc	.+12     	; 0xb04 <BallPlay+0xf8>
+ af8:	88 23       	and	r24, r24
+ afa:	59 f0       	breq	.+22     	; 0xb12 <BallPlay+0x106>
+ afc:	81 30       	cpi	r24, 0x01	; 1
+ afe:	09 f0       	breq	.+2      	; 0xb02 <BallPlay+0xf6>
+ b00:	06 c2       	rjmp	.+1036   	; 0xf0e <BallPlay+0x502>
+ b02:	0c c0       	rjmp	.+24     	; 0xb1c <BallPlay+0x110>
+ b04:	83 30       	cpi	r24, 0x03	; 3
+ b06:	09 f4       	brne	.+2      	; 0xb0a <BallPlay+0xfe>
+ b08:	5f c0       	rjmp	.+190    	; 0xbc8 <BallPlay+0x1bc>
+ b0a:	84 30       	cpi	r24, 0x04	; 4
+ b0c:	09 f0       	breq	.+2      	; 0xb10 <BallPlay+0x104>
+ b0e:	ff c1       	rjmp	.+1022   	; 0xf0e <BallPlay+0x502>
+ b10:	f5 c1       	rjmp	.+1002   	; 0xefc <BallPlay+0x4f0>
+	{
+		case wait_Ready_ball:
+		P1SCORE = 0;
+ b12:	10 92 03 02 	sts	0x0203, r1	; 0x800203 <P1SCORE>
+		P2SCORE = 0;
+ b16:	10 92 02 02 	sts	0x0202, r1	; 0x800202 <P2SCORE>
+		break;
+ b1a:	08 95       	ret
+		case start:
+		if(!P1SCORE && !P2SCORE)
+ b1c:	80 91 03 02 	lds	r24, 0x0203	; 0x800203 <P1SCORE>
+ b20:	81 11       	cpse	r24, r1
+ b22:	18 c0       	rjmp	.+48     	; 0xb54 <BallPlay+0x148>
+ b24:	80 91 02 02 	lds	r24, 0x0202	; 0x800202 <P2SCORE>
+ b28:	81 11       	cpse	r24, r1
+ b2a:	2a c0       	rjmp	.+84     	; 0xb80 <BallPlay+0x174>
+		{
+			hit = -1;
+ b2c:	8f ef       	ldi	r24, 0xFF	; 255
+ b2e:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+			wall = 0;
+ b32:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__data_start>
+			BRindex = 4;
+ b36:	84 e0       	ldi	r24, 0x04	; 4
+ b38:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <BRindex>
+			BCindex = 4;
+ b3c:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <BCindex>
+			P1index = 3;
+ b40:	83 e0       	ldi	r24, 0x03	; 3
+ b42:	80 93 1e 01 	sts	0x011E, r24	; 0x80011e <P1index>
+			P2index = 3;
+ b46:	80 93 16 01 	sts	0x0116, r24	; 0x800116 <P2index>
+			P1SCORE = 0;
+ b4a:	10 92 03 02 	sts	0x0203, r1	; 0x800203 <P1SCORE>
+			P2SCORE = 0;
+ b4e:	10 92 02 02 	sts	0x0202, r1	; 0x800202 <P2SCORE>
+ b52:	08 95       	ret
+		}
+		else if(P1SCORE)
+		{
+			hit = 1;
+ b54:	81 e0       	ldi	r24, 0x01	; 1
+ b56:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+			wall = 0;
+ b5a:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__data_start>
+			BRindex = 4;
+ b5e:	84 e0       	ldi	r24, 0x04	; 4
+ b60:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <BRindex>
+			BCindex = 2;
+ b64:	82 e0       	ldi	r24, 0x02	; 2
+ b66:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <BCindex>
+			P1index = 3;
+ b6a:	83 e0       	ldi	r24, 0x03	; 3
+ b6c:	80 93 1e 01 	sts	0x011E, r24	; 0x80011e <P1index>
+			P2index = 3;
+ b70:	80 93 16 01 	sts	0x0116, r24	; 0x800116 <P2index>
+			P1++;
+ b74:	80 91 05 02 	lds	r24, 0x0205	; 0x800205 <P1>
+ b78:	8f 5f       	subi	r24, 0xFF	; 255
+ b7a:	80 93 05 02 	sts	0x0205, r24	; 0x800205 <P1>
+ b7e:	08 95       	ret
+		}
+		else if(P2SCORE)
+		{
+			hit = -1;
+ b80:	8f ef       	ldi	r24, 0xFF	; 255
+ b82:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+			wall = 0;
+ b86:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__data_start>
+			BRindex = 4;
+ b8a:	84 e0       	ldi	r24, 0x04	; 4
+ b8c:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <BRindex>
+			BCindex = 5;
+ b90:	85 e0       	ldi	r24, 0x05	; 5
+ b92:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <BCindex>
+			P1index = 3;
+ b96:	83 e0       	ldi	r24, 0x03	; 3
+ b98:	80 93 1e 01 	sts	0x011E, r24	; 0x80011e <P1index>
+			P2index = 3;
+ b9c:	80 93 16 01 	sts	0x0116, r24	; 0x800116 <P2index>
+			P2++;
+ ba0:	80 91 04 02 	lds	r24, 0x0204	; 0x800204 <P2>
+ ba4:	8f 5f       	subi	r24, 0xFF	; 255
+ ba6:	80 93 04 02 	sts	0x0204, r24	; 0x800204 <P2>
+ baa:	08 95       	ret
+		}
+		break;
+		case start_wait:
+		P1SCORE = 0;
+ bac:	10 92 03 02 	sts	0x0203, r1	; 0x800203 <P1SCORE>
+		P2SCORE = 0;
+ bb0:	10 92 02 02 	sts	0x0202, r1	; 0x800202 <P2SCORE>
+		counterstart++;
+ bb4:	80 91 f4 01 	lds	r24, 0x01F4	; 0x8001f4 <__data_end>
+ bb8:	90 91 f5 01 	lds	r25, 0x01F5	; 0x8001f5 <__data_end+0x1>
+ bbc:	01 96       	adiw	r24, 0x01	; 1
+ bbe:	90 93 f5 01 	sts	0x01F5, r25	; 0x8001f5 <__data_end+0x1>
+ bc2:	80 93 f4 01 	sts	0x01F4, r24	; 0x8001f4 <__data_end>
+		break;
+ bc6:	08 95       	ret
+		case move_ball:
+		counterstart = 0;
+ bc8:	10 92 f5 01 	sts	0x01F5, r1	; 0x8001f5 <__data_end+0x1>
+ bcc:	10 92 f4 01 	sts	0x01F4, r1	; 0x8001f4 <__data_end>
+		BRindex = BRindex + wall;
+ bd0:	20 91 00 01 	lds	r18, 0x0100	; 0x800100 <__data_start>
+ bd4:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <BRindex>
+ bd8:	82 0f       	add	r24, r18
+ bda:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <BRindex>
+		BCindex = BCindex + hit;
+ bde:	30 91 03 01 	lds	r19, 0x0103	; 0x800103 <BCindex>
+ be2:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <hit>
+ be6:	93 0f       	add	r25, r19
+ be8:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <BCindex>
+		
+		if(BRindex > 6 || BRindex < 1)
+ bec:	3f ef       	ldi	r19, 0xFF	; 255
+ bee:	38 0f       	add	r19, r24
+ bf0:	36 30       	cpi	r19, 0x06	; 6
+ bf2:	18 f0       	brcs	.+6      	; 0xbfa <BallPlay+0x1ee>
+		wall = wall * -1;
+ bf4:	21 95       	neg	r18
+ bf6:	20 93 00 01 	sts	0x0100, r18	; 0x800100 <__data_start>
+		
+		if(BCindex < 2) //P1 side
+ bfa:	92 30       	cpi	r25, 0x02	; 2
+ bfc:	08 f0       	brcs	.+2      	; 0xc00 <BallPlay+0x1f4>
+ bfe:	bf c0       	rjmp	.+382    	; 0xd7e <BallPlay+0x372>
+		{
+			if(BRindex == 0)
+ c00:	81 11       	cpse	r24, r1
+ c02:	0a c0       	rjmp	.+20     	; 0xc18 <BallPlay+0x20c>
+			{
+				if(P1index == 0)
+ c04:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <P1index>
+ c08:	81 11       	cpse	r24, r1
+ c0a:	81 c1       	rjmp	.+770    	; 0xf0e <BallPlay+0x502>
+				{
+					hit = 1;
+ c0c:	81 e0       	ldi	r24, 0x01	; 1
+ c0e:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 1;
+ c12:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ c16:	08 95       	ret
+				}
+			}
+			else if(BRindex == 1)
+ c18:	81 30       	cpi	r24, 0x01	; 1
+ c1a:	99 f4       	brne	.+38     	; 0xc42 <BallPlay+0x236>
+			{
+				if(P1index == 0)
+ c1c:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <P1index>
+ c20:	81 11       	cpse	r24, r1
+ c22:	06 c0       	rjmp	.+12     	; 0xc30 <BallPlay+0x224>
+				{
+					hit = 1;
+ c24:	81 e0       	ldi	r24, 0x01	; 1
+ c26:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 0;
+ c2a:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__data_start>
+ c2e:	08 95       	ret
+				}
+				else if(P1index == 1)
+ c30:	81 30       	cpi	r24, 0x01	; 1
+ c32:	09 f0       	breq	.+2      	; 0xc36 <BallPlay+0x22a>
+ c34:	6c c1       	rjmp	.+728    	; 0xf0e <BallPlay+0x502>
+				{
+					hit = 1;
+ c36:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = -1;
+ c3a:	8f ef       	ldi	r24, 0xFF	; 255
+ c3c:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ c40:	08 95       	ret
+				}
+			}
+			else if(BRindex == 2)
+ c42:	82 30       	cpi	r24, 0x02	; 2
+ c44:	d9 f4       	brne	.+54     	; 0xc7c <BallPlay+0x270>
+			{
+				if(P1index == 0)
+ c46:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <P1index>
+ c4a:	81 11       	cpse	r24, r1
+ c4c:	06 c0       	rjmp	.+12     	; 0xc5a <BallPlay+0x24e>
+				{
+					hit = 1;
+ c4e:	81 e0       	ldi	r24, 0x01	; 1
+ c50:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 1;
+ c54:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ c58:	08 95       	ret
+				}
+				else if(P1index == 1)
+ c5a:	81 30       	cpi	r24, 0x01	; 1
+ c5c:	29 f4       	brne	.+10     	; 0xc68 <BallPlay+0x25c>
+				{
+					hit = 1;
+ c5e:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 0;
+ c62:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__data_start>
+ c66:	08 95       	ret
+				}
+				else if(P1index == 2)
+ c68:	82 30       	cpi	r24, 0x02	; 2
+ c6a:	09 f0       	breq	.+2      	; 0xc6e <BallPlay+0x262>
+ c6c:	50 c1       	rjmp	.+672    	; 0xf0e <BallPlay+0x502>
+				{
+					hit = 1;
+ c6e:	81 e0       	ldi	r24, 0x01	; 1
+ c70:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = -1;
+ c74:	8f ef       	ldi	r24, 0xFF	; 255
+ c76:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ c7a:	08 95       	ret
+				}
+			}
+			else if(BRindex == 3)
+ c7c:	83 30       	cpi	r24, 0x03	; 3
+ c7e:	d9 f4       	brne	.+54     	; 0xcb6 <BallPlay+0x2aa>
+			{
+				if(P1index == 1)
+ c80:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <P1index>
+ c84:	81 30       	cpi	r24, 0x01	; 1
+ c86:	29 f4       	brne	.+10     	; 0xc92 <BallPlay+0x286>
+				{
+					hit = 1;
+ c88:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 1;
+ c8c:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ c90:	08 95       	ret
+				}
+				else if(P1index == 2)
+ c92:	82 30       	cpi	r24, 0x02	; 2
+ c94:	31 f4       	brne	.+12     	; 0xca2 <BallPlay+0x296>
+				{
+					hit = 1;
+ c96:	81 e0       	ldi	r24, 0x01	; 1
+ c98:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 0;
+ c9c:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__data_start>
+ ca0:	08 95       	ret
+				}
+				else if(P1index == 3)
+ ca2:	83 30       	cpi	r24, 0x03	; 3
+ ca4:	09 f0       	breq	.+2      	; 0xca8 <BallPlay+0x29c>
+ ca6:	33 c1       	rjmp	.+614    	; 0xf0e <BallPlay+0x502>
+				{
+					hit = 1;
+ ca8:	81 e0       	ldi	r24, 0x01	; 1
+ caa:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = -1;
+ cae:	8f ef       	ldi	r24, 0xFF	; 255
+ cb0:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ cb4:	08 95       	ret
+				}
+			}
+			else if(BRindex == 4)
+ cb6:	84 30       	cpi	r24, 0x04	; 4
+ cb8:	e1 f4       	brne	.+56     	; 0xcf2 <BallPlay+0x2e6>
+			{
+				if(P1index == 2)
+ cba:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <P1index>
+ cbe:	82 30       	cpi	r24, 0x02	; 2
+ cc0:	31 f4       	brne	.+12     	; 0xcce <BallPlay+0x2c2>
+				{
+					hit = 1;
+ cc2:	81 e0       	ldi	r24, 0x01	; 1
+ cc4:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 1;
+ cc8:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ ccc:	08 95       	ret
+				}
+				else if(P1index == 3)
+ cce:	83 30       	cpi	r24, 0x03	; 3
+ cd0:	31 f4       	brne	.+12     	; 0xcde <BallPlay+0x2d2>
+				{
+					hit = 1;
+ cd2:	81 e0       	ldi	r24, 0x01	; 1
+ cd4:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 0;
+ cd8:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__data_start>
+ cdc:	08 95       	ret
+				}
+				else if(P1index == 4)
+ cde:	84 30       	cpi	r24, 0x04	; 4
+ ce0:	09 f0       	breq	.+2      	; 0xce4 <BallPlay+0x2d8>
+ ce2:	15 c1       	rjmp	.+554    	; 0xf0e <BallPlay+0x502>
+				{
+					hit = 1;
+ ce4:	81 e0       	ldi	r24, 0x01	; 1
+ ce6:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = -1;
+ cea:	8f ef       	ldi	r24, 0xFF	; 255
+ cec:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ cf0:	08 95       	ret
+				}
+			}
+			else if(BRindex == 5)
+ cf2:	85 30       	cpi	r24, 0x05	; 5
+ cf4:	e1 f4       	brne	.+56     	; 0xd2e <BallPlay+0x322>
+			{
+				if(P1index == 3)
+ cf6:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <P1index>
+ cfa:	83 30       	cpi	r24, 0x03	; 3
+ cfc:	31 f4       	brne	.+12     	; 0xd0a <BallPlay+0x2fe>
+				{
+					hit = 1;
+ cfe:	81 e0       	ldi	r24, 0x01	; 1
+ d00:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 1;
+ d04:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ d08:	08 95       	ret
+				}
+				else if(P1index == 4)
+ d0a:	84 30       	cpi	r24, 0x04	; 4
+ d0c:	31 f4       	brne	.+12     	; 0xd1a <BallPlay+0x30e>
+				{
+					hit = 1;
+ d0e:	81 e0       	ldi	r24, 0x01	; 1
+ d10:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 0;
+ d14:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__data_start>
+ d18:	08 95       	ret
+				}
+				else if(P1index == 5)
+ d1a:	85 30       	cpi	r24, 0x05	; 5
+ d1c:	09 f0       	breq	.+2      	; 0xd20 <BallPlay+0x314>
+ d1e:	f7 c0       	rjmp	.+494    	; 0xf0e <BallPlay+0x502>
+				{
+					hit = 1;
+ d20:	81 e0       	ldi	r24, 0x01	; 1
+ d22:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = -1;
+ d26:	8f ef       	ldi	r24, 0xFF	; 255
+ d28:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ d2c:	08 95       	ret
+				}
+			}
+			else if(BRindex == 6)
+ d2e:	86 30       	cpi	r24, 0x06	; 6
+ d30:	a1 f4       	brne	.+40     	; 0xd5a <BallPlay+0x34e>
+			{
+				if(P1index == 4)
+ d32:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <P1index>
+ d36:	84 30       	cpi	r24, 0x04	; 4
+ d38:	31 f4       	brne	.+12     	; 0xd46 <BallPlay+0x33a>
+				{
+					hit = 1;
+ d3a:	81 e0       	ldi	r24, 0x01	; 1
+ d3c:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 0;
+ d40:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__data_start>
+ d44:	08 95       	ret
+				}
+				else if(P1index == 5)
+ d46:	85 30       	cpi	r24, 0x05	; 5
+ d48:	09 f0       	breq	.+2      	; 0xd4c <BallPlay+0x340>
+ d4a:	e1 c0       	rjmp	.+450    	; 0xf0e <BallPlay+0x502>
+				{
+					hit = 1;
+ d4c:	81 e0       	ldi	r24, 0x01	; 1
+ d4e:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = -1;
+ d52:	8f ef       	ldi	r24, 0xFF	; 255
+ d54:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ d58:	08 95       	ret
+				}
+			}
+			else if(BRindex == 7)
+ d5a:	87 30       	cpi	r24, 0x07	; 7
+ d5c:	61 f4       	brne	.+24     	; 0xd76 <BallPlay+0x36a>
+			{
+				if(P1index == 5)
+ d5e:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <P1index>
+ d62:	85 30       	cpi	r24, 0x05	; 5
+ d64:	09 f0       	breq	.+2      	; 0xd68 <BallPlay+0x35c>
+ d66:	d3 c0       	rjmp	.+422    	; 0xf0e <BallPlay+0x502>
+				{
+					hit = 1;
+ d68:	81 e0       	ldi	r24, 0x01	; 1
+ d6a:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = -1;
+ d6e:	8f ef       	ldi	r24, 0xFF	; 255
+ d70:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ d74:	08 95       	ret
+				}
+			}
+			else
+			{
+				P2SCORE = 1;
+ d76:	81 e0       	ldi	r24, 0x01	; 1
+ d78:	80 93 02 02 	sts	0x0202, r24	; 0x800202 <P2SCORE>
+ d7c:	08 95       	ret
+				
+			}
+		}
+		
+		
+		else if(BCindex > 5) //on P2 side
+ d7e:	96 30       	cpi	r25, 0x06	; 6
+ d80:	08 f4       	brcc	.+2      	; 0xd84 <BallPlay+0x378>
+ d82:	c5 c0       	rjmp	.+394    	; 0xf0e <BallPlay+0x502>
+		{
+			if(BRindex == 0)
+ d84:	81 11       	cpse	r24, r1
+ d86:	0a c0       	rjmp	.+20     	; 0xd9c <BallPlay+0x390>
+			{
+				if(P2index == 0)
+ d88:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <P2index>
+ d8c:	81 11       	cpse	r24, r1
+ d8e:	bf c0       	rjmp	.+382    	; 0xf0e <BallPlay+0x502>
+				{
+					hit = -1;
+ d90:	8f ef       	ldi	r24, 0xFF	; 255
+ d92:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = -1;
+ d96:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ d9a:	08 95       	ret
+				}
+			}
+			else if(BRindex == 1)
+ d9c:	81 30       	cpi	r24, 0x01	; 1
+ d9e:	99 f4       	brne	.+38     	; 0xdc6 <BallPlay+0x3ba>
+			{
+				if(P2index == 0)
+ da0:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <P2index>
+ da4:	81 11       	cpse	r24, r1
+ da6:	06 c0       	rjmp	.+12     	; 0xdb4 <BallPlay+0x3a8>
+				{
+					hit = -1;
+ da8:	8f ef       	ldi	r24, 0xFF	; 255
+ daa:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 0;
+ dae:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__data_start>
+ db2:	08 95       	ret
+				}
+				else if(P2index == 1)
+ db4:	81 30       	cpi	r24, 0x01	; 1
+ db6:	09 f0       	breq	.+2      	; 0xdba <BallPlay+0x3ae>
+ db8:	aa c0       	rjmp	.+340    	; 0xf0e <BallPlay+0x502>
+				{
+					hit = -1;
+ dba:	8f ef       	ldi	r24, 0xFF	; 255
+ dbc:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = -1;
+ dc0:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ dc4:	08 95       	ret
+				}
+			}
+			else if(BRindex == 2)
+ dc6:	82 30       	cpi	r24, 0x02	; 2
+ dc8:	e1 f4       	brne	.+56     	; 0xe02 <BallPlay+0x3f6>
+			{
+				if(P2index == 0)
+ dca:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <P2index>
+ dce:	81 11       	cpse	r24, r1
+ dd0:	07 c0       	rjmp	.+14     	; 0xde0 <BallPlay+0x3d4>
+				{
+					hit = -1;
+ dd2:	8f ef       	ldi	r24, 0xFF	; 255
+ dd4:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 1;
+ dd8:	81 e0       	ldi	r24, 0x01	; 1
+ dda:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ dde:	08 95       	ret
+				}
+				else if(P2index == 1)
+ de0:	81 30       	cpi	r24, 0x01	; 1
+ de2:	31 f4       	brne	.+12     	; 0xdf0 <BallPlay+0x3e4>
+				{
+					hit = -1;
+ de4:	8f ef       	ldi	r24, 0xFF	; 255
+ de6:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 0;
+ dea:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__data_start>
+ dee:	08 95       	ret
+				}
+				else if(P2index == 2)
+ df0:	82 30       	cpi	r24, 0x02	; 2
+ df2:	09 f0       	breq	.+2      	; 0xdf6 <BallPlay+0x3ea>
+ df4:	8c c0       	rjmp	.+280    	; 0xf0e <BallPlay+0x502>
+				{
+					hit = -1;
+ df6:	8f ef       	ldi	r24, 0xFF	; 255
+ df8:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = -1;
+ dfc:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ e00:	08 95       	ret
+				}
+			}
+			else if(BRindex == 3)
+ e02:	83 30       	cpi	r24, 0x03	; 3
+ e04:	e1 f4       	brne	.+56     	; 0xe3e <BallPlay+0x432>
+			{
+				if(P2index == 1)
+ e06:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <P2index>
+ e0a:	81 30       	cpi	r24, 0x01	; 1
+ e0c:	39 f4       	brne	.+14     	; 0xe1c <BallPlay+0x410>
+				{
+					hit = -1;
+ e0e:	8f ef       	ldi	r24, 0xFF	; 255
+ e10:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 1;
+ e14:	81 e0       	ldi	r24, 0x01	; 1
+ e16:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ e1a:	08 95       	ret
+				}
+				else if(P2index == 2)
+ e1c:	82 30       	cpi	r24, 0x02	; 2
+ e1e:	31 f4       	brne	.+12     	; 0xe2c <BallPlay+0x420>
+				{
+					hit = -1;
+ e20:	8f ef       	ldi	r24, 0xFF	; 255
+ e22:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 0;
+ e26:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__data_start>
+ e2a:	08 95       	ret
+				}
+				else if(P2index == 3)
+ e2c:	83 30       	cpi	r24, 0x03	; 3
+ e2e:	09 f0       	breq	.+2      	; 0xe32 <BallPlay+0x426>
+ e30:	6e c0       	rjmp	.+220    	; 0xf0e <BallPlay+0x502>
+				{
+					hit = -1;
+ e32:	8f ef       	ldi	r24, 0xFF	; 255
+ e34:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = -1;
+ e38:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ e3c:	08 95       	ret
+				}
+			}
+			else if(BRindex == 4)
+ e3e:	84 30       	cpi	r24, 0x04	; 4
+ e40:	e1 f4       	brne	.+56     	; 0xe7a <BallPlay+0x46e>
+			{
+				if(P2index == 2)
+ e42:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <P2index>
+ e46:	82 30       	cpi	r24, 0x02	; 2
+ e48:	39 f4       	brne	.+14     	; 0xe58 <BallPlay+0x44c>
+				{
+					hit = -1;
+ e4a:	8f ef       	ldi	r24, 0xFF	; 255
+ e4c:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 1;
+ e50:	81 e0       	ldi	r24, 0x01	; 1
+ e52:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ e56:	08 95       	ret
+				}
+				else if(P2index == 3)
+ e58:	83 30       	cpi	r24, 0x03	; 3
+ e5a:	31 f4       	brne	.+12     	; 0xe68 <BallPlay+0x45c>
+				{
+					hit = -1;
+ e5c:	8f ef       	ldi	r24, 0xFF	; 255
+ e5e:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 0;
+ e62:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__data_start>
+ e66:	08 95       	ret
+				}
+				else if(P2index == 4)
+ e68:	84 30       	cpi	r24, 0x04	; 4
+ e6a:	09 f0       	breq	.+2      	; 0xe6e <BallPlay+0x462>
+ e6c:	50 c0       	rjmp	.+160    	; 0xf0e <BallPlay+0x502>
+				{
+					hit = -1;
+ e6e:	8f ef       	ldi	r24, 0xFF	; 255
+ e70:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = -1;
+ e74:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ e78:	08 95       	ret
+				}
+			}
+			else if(BRindex == 5)
+ e7a:	85 30       	cpi	r24, 0x05	; 5
+ e7c:	d9 f4       	brne	.+54     	; 0xeb4 <BallPlay+0x4a8>
+			{
+				if(P2index == 3)
+ e7e:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <P2index>
+ e82:	83 30       	cpi	r24, 0x03	; 3
+ e84:	39 f4       	brne	.+14     	; 0xe94 <BallPlay+0x488>
+				{
+					hit = -1;
+ e86:	8f ef       	ldi	r24, 0xFF	; 255
+ e88:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 1;
+ e8c:	81 e0       	ldi	r24, 0x01	; 1
+ e8e:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ e92:	08 95       	ret
+				}
+				else if(P2index == 4)
+ e94:	84 30       	cpi	r24, 0x04	; 4
+ e96:	31 f4       	brne	.+12     	; 0xea4 <BallPlay+0x498>
+				{
+					hit = -1;
+ e98:	8f ef       	ldi	r24, 0xFF	; 255
+ e9a:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 0;
+ e9e:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__data_start>
+ ea2:	08 95       	ret
+				}
+				else if(P2index == 5)
+ ea4:	85 30       	cpi	r24, 0x05	; 5
+ ea6:	99 f5       	brne	.+102    	; 0xf0e <BallPlay+0x502>
+				{
+					hit = -1;
+ ea8:	8f ef       	ldi	r24, 0xFF	; 255
+ eaa:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = -1;
+ eae:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ eb2:	08 95       	ret
+				}
+			}
+			else if(BRindex == 6)
+ eb4:	86 30       	cpi	r24, 0x06	; 6
+ eb6:	91 f4       	brne	.+36     	; 0xedc <BallPlay+0x4d0>
+			{
+				if(P2index == 4)
+ eb8:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <P2index>
+ ebc:	84 30       	cpi	r24, 0x04	; 4
+ ebe:	31 f4       	brne	.+12     	; 0xecc <BallPlay+0x4c0>
+				{
+					hit = -1;
+ ec0:	8f ef       	ldi	r24, 0xFF	; 255
+ ec2:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = 0;
+ ec6:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__data_start>
+ eca:	08 95       	ret
+				}
+				else if(P2index == 5)
+ ecc:	85 30       	cpi	r24, 0x05	; 5
+ ece:	f9 f4       	brne	.+62     	; 0xf0e <BallPlay+0x502>
+				{
+					hit = -1;
+ ed0:	8f ef       	ldi	r24, 0xFF	; 255
+ ed2:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = -1;
+ ed6:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ eda:	08 95       	ret
+				}
+			}
+			else if(BRindex == 7)
+ edc:	87 30       	cpi	r24, 0x07	; 7
+ ede:	51 f4       	brne	.+20     	; 0xef4 <BallPlay+0x4e8>
+			{
+				if(P2index == 5)
+ ee0:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <P2index>
+ ee4:	85 30       	cpi	r24, 0x05	; 5
+ ee6:	99 f4       	brne	.+38     	; 0xf0e <BallPlay+0x502>
+				{
+					hit = -1;
+ ee8:	8f ef       	ldi	r24, 0xFF	; 255
+ eea:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hit>
+					wall = -1;
+ eee:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ ef2:	08 95       	ret
+				}
+			}
+			else
+			{
+				P1SCORE = 1;
+ ef4:	81 e0       	ldi	r24, 0x01	; 1
+ ef6:	80 93 03 02 	sts	0x0203, r24	; 0x800203 <P1SCORE>
+ efa:	08 95       	ret
+			}
+		}
+		break;
+		case holdball:
+		counterball++;
+ efc:	80 91 f6 01 	lds	r24, 0x01F6	; 0x8001f6 <counterball>
+ f00:	90 91 f7 01 	lds	r25, 0x01F7	; 0x8001f7 <counterball+0x1>
+ f04:	01 96       	adiw	r24, 0x01	; 1
+ f06:	90 93 f7 01 	sts	0x01F7, r25	; 0x8001f7 <counterball+0x1>
+ f0a:	80 93 f6 01 	sts	0x01F6, r24	; 0x8001f6 <counterball>
+ f0e:	08 95       	ret
+
+00000f10 <main>:
+}
+
+
+int main(void)
+{
+	DDRA = 0xFF; PORTA = 0x00;
+ f10:	8f ef       	ldi	r24, 0xFF	; 255
+ f12:	81 b9       	out	0x01, r24	; 1
+ f14:	12 b8       	out	0x02, r1	; 2
+	DDRB = 0xFF; PORTB = 0x00;
+ f16:	84 b9       	out	0x04, r24	; 4
+ f18:	15 b8       	out	0x05, r1	; 5
+	DDRC = 0xFF; PORTC = 0x00; // LCD data lines
+ f1a:	87 b9       	out	0x07, r24	; 7
+ f1c:	18 b8       	out	0x08, r1	; 8
+	DDRD = 0xE0; PORTD = 0x1F; // LCD control lines
+ f1e:	80 ee       	ldi	r24, 0xE0	; 224
+ f20:	8a b9       	out	0x0a, r24	; 10
+ f22:	8f e1       	ldi	r24, 0x1F	; 31
+ f24:	8b b9       	out	0x0b, r24	; 11
+	LCD_init();
+ f26:	17 d9       	rcall	.-3538   	; 0x156 <LCD_init>
+	ThumbsUp(); 
+ f28:	47 d9       	rcall	.-3442   	; 0x1b8 <ThumbsUp>
+ f2a:	68 ee       	ldi	r22, 0xE8	; 232
+	TimerSet(1000);
+ f2c:	73 e0       	ldi	r23, 0x03	; 3
+ f2e:	80 e0       	ldi	r24, 0x00	; 0
+ f30:	90 e0       	ldi	r25, 0x00	; 0
+ f32:	b5 d9       	rcall	.-3222   	; 0x29e <TimerSet>
+	TimerOn();
+ f34:	54 d9       	rcall	.-3416   	; 0x1de <TimerOn>
+	
+	if(read_eeprom_word(&my_eeprom_array[0]) + '0' == '/')
+ f36:	80 e0       	ldi	r24, 0x00	; 0
+ f38:	90 e0       	ldi	r25, 0x00	; 0
+ f3a:	2f d0       	rcall	.+94     	; 0xf9a <eeprom_read_word>
+ f3c:	01 96       	adiw	r24, 0x01	; 1
+ f3e:	29 f4       	brne	.+10     	; 0xf4a <main+0x3a>
+	write_eeprom_word(&my_eeprom_array[0], read_eeprom_word(&my_eeprom_array[0]) + 1);
+ f40:	60 e0       	ldi	r22, 0x00	; 0
+ f42:	70 e0       	ldi	r23, 0x00	; 0
+ f44:	80 e0       	ldi	r24, 0x00	; 0
+ f46:	90 e0       	ldi	r25, 0x00	; 0
+ f48:	2d d0       	rcall	.+90     	; 0xfa4 <eeprom_write_word>
+	if(read_eeprom_word(&my_eeprom_array[5]) + '0' == '/')
+ f4a:	85 e0       	ldi	r24, 0x05	; 5
+ f4c:	90 e0       	ldi	r25, 0x00	; 0
+ f4e:	25 d0       	rcall	.+74     	; 0xf9a <eeprom_read_word>
+ f50:	01 96       	adiw	r24, 0x01	; 1
+ f52:	29 f4       	brne	.+10     	; 0xf5e <main+0x4e>
+	write_eeprom_word(&my_eeprom_array[5], read_eeprom_word(&my_eeprom_array[5]) + 1);
+ f54:	60 e0       	ldi	r22, 0x00	; 0
+ f56:	70 e0       	ldi	r23, 0x00	; 0
+ f58:	85 e0       	ldi	r24, 0x05	; 5
+ f5a:	90 e0       	ldi	r25, 0x00	; 0
+ f5c:	23 d0       	rcall	.+70     	; 0xfa4 <eeprom_write_word>
+	if(read_eeprom_word(&my_eeprom_array[3]) + '0' == '/')
+ f5e:	83 e0       	ldi	r24, 0x03	; 3
+ f60:	90 e0       	ldi	r25, 0x00	; 0
+ f62:	1b d0       	rcall	.+54     	; 0xf9a <eeprom_read_word>
+ f64:	01 96       	adiw	r24, 0x01	; 1
+ f66:	29 f4       	brne	.+10     	; 0xf72 <main+0x62>
+	write_eeprom_word(&my_eeprom_array[3], read_eeprom_word(&my_eeprom_array[3]) + 1);
+ f68:	60 e0       	ldi	r22, 0x00	; 0
+ f6a:	70 e0       	ldi	r23, 0x00	; 0
+ f6c:	83 e0       	ldi	r24, 0x03	; 3
+
+	while(1)
+	{
+		
+		buttonD = PIND;
+ f6e:	90 e0       	ldi	r25, 0x00	; 0
+		buttonD = ~buttonD;
+ f70:	19 d0       	rcall	.+50     	; 0xfa4 <eeprom_write_word>
+ f72:	89 b1       	in	r24, 0x09	; 9
+ f74:	80 95       	com	r24
+		
+		MenuScreen();
+ f76:	80 93 12 02 	sts	0x0212, r24	; 0x800212 <buttonD>
+		MatrixPlay();
+ f7a:	a2 d9       	rcall	.-3260   	; 0x2c0 <MenuScreen>
+ f7c:	44 db       	rcall	.-2424   	; 0x606 <MatrixPlay>
+		MoveP1();
+ f7e:	cd db       	rcall	.-2150   	; 0x71a <MoveP1>
+ f80:	42 dc       	rcall	.-1916   	; 0x806 <MoveP2>
+		MoveP2();
+ f82:	c4 dc       	rcall	.-1656   	; 0x90c <MoveP2bot>
+ f84:	43 dd       	rcall	.-1402   	; 0xa0c <BallPlay>
+		MoveP2bot();
+ f86:	f5 cf       	rjmp	.-22     	; 0xf72 <main+0x62>
+
+00000f88 <__tablejump2__>:
+ f88:	ee 0f       	add	r30, r30
+		BallPlay();
+ f8a:	ff 1f       	adc	r31, r31
+ f8c:	00 24       	eor	r0, r0
+ f8e:	00 1c       	adc	r0, r0
+ f90:	0b be       	out	0x3b, r0	; 59
+ f92:	07 90       	elpm	r0, Z+
+ f94:	f6 91       	elpm	r31, Z
+ f96:	e0 2d       	mov	r30, r0
+ f98:	09 94       	ijmp
+
+00000f9a <eeprom_read_word>:
+ f9a:	a8 e1       	ldi	r26, 0x18	; 24
+ f9c:	b0 e0       	ldi	r27, 0x00	; 0
+ f9e:	42 e0       	ldi	r20, 0x02	; 2
+ fa0:	50 e0       	ldi	r21, 0x00	; 0
+ fa2:	05 c0       	rjmp	.+10     	; 0xfae <eeprom_read_blraw>
+
+00000fa4 <eeprom_write_word>:
+ fa4:	12 d0       	rcall	.+36     	; 0xfca <eeprom_write_byte>
+ fa6:	27 2f       	mov	r18, r23
+ fa8:	11 c0       	rjmp	.+34     	; 0xfcc <eeprom_write_r18>
+
+00000faa <eeprom_read_block>:
+ faa:	dc 01       	movw	r26, r24
+ fac:	cb 01       	movw	r24, r22
+
+00000fae <eeprom_read_blraw>:
+ fae:	fc 01       	movw	r30, r24
+ fb0:	f9 99       	sbic	0x1f, 1	; 31
+ fb2:	fe cf       	rjmp	.-4      	; 0xfb0 <eeprom_read_blraw+0x2>
+ fb4:	06 c0       	rjmp	.+12     	; 0xfc2 <eeprom_read_blraw+0x14>
+ fb6:	f2 bd       	out	0x22, r31	; 34
+ fb8:	e1 bd       	out	0x21, r30	; 33
+ fba:	f8 9a       	sbi	0x1f, 0	; 31
+ fbc:	31 96       	adiw	r30, 0x01	; 1
+ fbe:	00 b4       	in	r0, 0x20	; 32
+ fc0:	0d 92       	st	X+, r0
+ fc2:	41 50       	subi	r20, 0x01	; 1
+ fc4:	50 40       	sbci	r21, 0x00	; 0
+ fc6:	b8 f7       	brcc	.-18     	; 0xfb6 <eeprom_read_blraw+0x8>
+ fc8:	08 95       	ret
+
+00000fca <eeprom_write_byte>:
+ fca:	26 2f       	mov	r18, r22
+
+00000fcc <eeprom_write_r18>:
+ fcc:	f9 99       	sbic	0x1f, 1	; 31
+ fce:	fe cf       	rjmp	.-4      	; 0xfcc <eeprom_write_r18>
+ fd0:	1f ba       	out	0x1f, r1	; 31
+ fd2:	92 bd       	out	0x22, r25	; 34
+ fd4:	81 bd       	out	0x21, r24	; 33
+ fd6:	20 bd       	out	0x20, r18	; 32
+ fd8:	0f b6       	in	r0, 0x3f	; 63
+ fda:	f8 94       	cli
+ fdc:	fa 9a       	sbi	0x1f, 2	; 31
+ fde:	f9 9a       	sbi	0x1f, 1	; 31
+ fe0:	0f be       	out	0x3f, r0	; 63
+ fe2:	01 96       	adiw	r24, 0x01	; 1
+ fe4:	08 95       	ret
+
+00000fe6 <_exit>:
+ fe6:	f8 94       	cli
+
+00000fe8 <__stop_program>:
+ fe8:	ff cf       	rjmp	.-2      	; 0xfe8 <__stop_program>
